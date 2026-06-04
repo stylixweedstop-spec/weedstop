@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WeedStop — Gamified Cannabis Sobriety App</title>
-<meta name="description" content="WeedStop: free gamified cannabis sobriety app. AI coaching, 12 mini-games with global leaderboards, avatar evolution, 33K+ themes. Currently in beta for Android.">
-<meta property="og:title" content="WeedStop — Beat Cravings. Level Up Your Life.">
-<meta property="og:description" content="Free gamified sobriety app. AI coach, global leaderboards, 10-phase avatar evolution. Android beta now open.">
+<title>WeedStop — Free App to Quit Weed | Cannabis Sobriety Tracker</title>
+<meta name="description" content="Quit weed with WeedStop — the free gamified cannabis sobriety app. AI coaching, 12 mini-games, 200+ achievements, avatar evolution, and anonymous community support. Available for Android.">
+<meta name="keywords" content="quit weed, stop smoking weed, cannabis quit app, weed sobriety tracker, quit marijuana, stop weed app, cannabis addiction help, weed recovery app, quit cannabis free app">
+<link rel="canonical" href="https://weedstop.netlify.app/">
+<link rel="alternate" hreflang="en" href="https://weedstop.netlify.app/">
+<link rel="alternate" hreflang="nl" href="https://weedstop.netlify.app/">
+<link rel="alternate" hreflang="x-default" href="https://weedstop.netlify.app/">
+<meta property="og:title" content="WeedStop — Quit Weed for Free. Track Progress. Level Up.">
+<meta property="og:description" content="Free gamified app to quit weed. AI coach, 12 mini-games, global leaderboards, 10-phase avatar evolution. Android beta now open.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="avatar_phase10.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WeedStop — Beat Cravings. Level Up Your Life.">
-<meta name="twitter:description" content="Free gamified sobriety app. AI coach, global leaderboards, 10-phase avatar evolution. Android beta now open.">
-<meta name="twitter:image" content="avatar_phase10.png">
+<meta property="og:url" content="https://weedstop.netlify.app/">
+<meta property="og:image" content="https://weedstop.netlify.app/avatar_phase10.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:site_name" content="WeedStop">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WeedStop — Quit Weed for Free. Track Progress. Level Up.">
+<meta name="twitter:description" content="Free gamified app to quit weed. AI coach, 12 mini-games, global leaderboards, 10-phase avatar evolution. Android beta now open.">
+<meta name="twitter:image" content="https://weedstop.netlify.app/avatar_phase10.png">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Aaron van Well — StyliX">
+<meta name="theme-color" content="#0a0f0a">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,16 +38,72 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "WeedStop",
-  "operatingSystem": "Android",
+  "operatingSystem": "Android 8.0+",
   "applicationCategory": "HealthApplication",
-  "description": "Free gamified cannabis sobriety companion app with AI coaching, 12 mini-games, global leaderboards, and 10-phase avatar evolution.",
+  "applicationSubCategory": "Substance Abuse Recovery",
+  "description": "Free gamified app to quit weed. Features AI coaching, 12 mini-games with global leaderboards, 200+ achievements, 10-phase avatar evolution, and anonymous community support.",
+  "url": "https://weedstop.netlify.app/",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.stylix.weedstop",
+  "screenshot": "https://weedstop.netlify.app/avatar_phase10.png",
+  "author": {
+    "@type": "Organization",
+    "name": "StyliX",
+    "email": "stylixweedstop@gmail.com"
+  },
   "offers": {
     "@type": "Offer",
     "price": "0",
-    "priceCurrency": "USD"
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
   },
   "softwareVersion": "1.29",
-  "inLanguage": ["en", "nl", "de", "es", "fr"]
+  "inLanguage": ["en", "nl", "de", "es", "fr"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "1",
+    "bestRating": "5"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is WeedStop really 100% free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, completely free forever. No subscriptions, no hidden costs, no credit card required. The points economy is entirely internal — you earn and spend within the app, no real money."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fully anonymous — no real name, no email verification, no data selling. Firebase anonymous authentication means your recovery journey stays completely private."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I relapse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "WeedStop tracks your relapse count and adjusts daily point limits (100→50 pts). On the 3rd relapse you get the option for a full reset. Relapse is part of recovery — the app is built to help you through it, not to judge."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can WeedStop replace professional treatment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. WeedStop is a supportive wellness tool — not a replacement for professional help. For serious addiction, consult a healthcare professional."
+      }
+    }
+  ]
 }
 </script>
 
@@ -900,8 +970,8 @@ footer {
               <span class="nl-only">Beta · Android · iOS Binnenkort</span>
       </div>
       <div class="hero-trust">
-        🛡️ <span class="en-only">100% Anonymous · No Ads · Free Forever</span>
-              <span class="nl-only">100% Anoniem · Geen Advertenties · Altijd Gratis</span>
+        🛡️ <span class="en-only">100% Anonymous · Minimal Ads · Free Forever</span>
+              <span class="nl-only">100% Anoniem · Minimale Advertenties · Altijd Gratis</span>
       </div>
 
       <h1>
@@ -972,7 +1042,7 @@ footer {
     <span class="trust-sep"></span>
     <span class="trust-badge-item">🔒 <span class="en-only">Firebase Secured</span><span class="nl-only">Firebase Beveiligd</span></span>
     <span class="trust-sep"></span>
-    <span class="trust-badge-item">🚫 <span class="en-only">Zero Ads</span><span class="nl-only">Geen Advertenties</span></span>
+    <span class="trust-badge-item">🚫 <span class="en-only">Minimal Ads</span><span class="nl-only">Minimale Advertenties</span></span>
     <span class="trust-sep"></span>
     <span class="trust-badge-item gold">⚔️ <span class="en-only">Anti-Cheat Verified</span><span class="nl-only">Anti-Cheat Geverifieerd</span></span>
     <span class="trust-sep"></span>
@@ -1686,7 +1756,7 @@ footer {
     </div>
   </div>
   <div class="footer-bot">
-    <span>© 2025 WeedStop · Beta v1.29</span>
+    <span>© 2026 WeedStop · Beta v1.29</span>
     <span class="en-only">Built by an ex-smoker from 🇳🇱</span>
     <span class="nl-only">Gebouwd door een ex-blower uit 🇳🇱</span>
     <span>stylixweedstop@gmail.com</span>
