@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="nl" href="https://weedstop.netlify.app/">
 <link rel="alternate" hreflang="x-default" href="https://weedstop.netlify.app/">
 <meta property="og:title" content="WeedStop — Quit Weed for Free. Track Progress. Level Up.">
-<meta property="og:description" content="Free gamified app to quit weed. AI coach, 12 mini-games, global leaderboards, 10-phase avatar evolution. Android beta now open.">
+<meta property="og:description" content="Free gamified app to quit weed. AI coach, 12 mini-games, global leaderboards, 10-phase avatar evolution. Coming soon to Google Play.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://weedstop.netlify.app/">
 <meta property="og:image" content="https://weedstop.netlify.app/avatar_phase10.png">
@@ -22,7 +22,7 @@
 <meta property="og:locale:alternate" content="nl_NL">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="WeedStop — Quit Weed for Free. Track Progress. Level Up.">
-<meta name="twitter:description" content="Free gamified app to quit weed. AI coach, 12 mini-games, global leaderboards, 10-phase avatar evolution. Android beta now open.">
+<meta name="twitter:description" content="Free gamified app to quit weed. AI coach, 12 mini-games, global leaderboards, 10-phase avatar evolution. Coming soon to Google Play.">
 <meta name="twitter:image" content="https://weedstop.netlify.app/avatar_phase10.png">
 <meta name="robots" content="index, follow">
 <meta name="google-site-verification" content="uJcR--GCM5JCtoIveCqKuIGnzW8yWFhE4QOEyCj9hjM">
@@ -189,6 +189,22 @@ nav.scrolled { padding: 10px 32px; }
 .logo .g { color: var(--green); }
 .logo .y { color: var(--gold); }
 .logo-mark { height: 1.8em; width: auto; border-radius: 7px; display: block; }
+
+/* ===== GO-LIVE TOGGLE =====
+   To switch the whole site from "Coming soon" to the live Google Play download,
+   add the word  live  to the <body> class, i.e.  <body class="lang-nl live">.
+   Everything with .play-live / .play-live-block appears, and .coming-soon hides. */
+.play-live, .play-live-block { display: none !important; }
+body.live .play-live { display: inline-flex !important; }
+body.live .play-live-block { display: block !important; }
+body.live .coming-soon { display: none !important; }
+.gplay-badge { display: inline-flex; align-items: center; gap: 11px; background: #000;
+  color: #fff; border: 1px solid #333; border-radius: 12px; padding: 10px 20px;
+  text-decoration: none; line-height: 1.15; transition: transform .15s, box-shadow .15s; }
+.gplay-badge:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,.4); }
+.gplay-badge svg { width: 26px; height: 26px; flex-shrink: 0; }
+.gplay-badge small { display: block; font-size: .62rem; font-weight: 500; opacity: .85; letter-spacing: .04em; }
+.gplay-badge b { display: block; font-size: 1.08rem; font-weight: 800; letter-spacing: .01em; }
 
 .nav-links {
   display: flex; gap: 26px; list-style: none;
@@ -921,7 +937,7 @@ footer {
 }
 </style>
 </head>
-<body class="lang-nl">
+<body class="lang-nl live">
 
 <!-- PROGRESS BAR -->
 <div id="progress"></div>
@@ -935,14 +951,14 @@ footer {
     <li><a href="#games">Games</a></li>
     <li><a href="#evolution"><span class="en-only">Evolution</span><span class="nl-only">Evolutie</span></a></li>
     <li><a href="#demo">Demo</a></li>
-    <li><a href="#beta">Beta</a></li>
+    <li><a href="#beta"><span class="en-only">Download</span><span class="nl-only">Download</span></a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
 
   <div class="nav-right">
     <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">EN</button>
-    <a href="#beta" class="nav-cta en-only">🚀 Join Beta</a>
-    <a href="#beta" class="nav-cta nl-only">🚀 Meedoen</a>
+    <a href="#beta" class="nav-cta en-only">🚀 Get the App</a>
+    <a href="#beta" class="nav-cta nl-only">🚀 Download</a>
   </div>
 
   <div class="ham" id="ham" onclick="toggleMob()" role="button" aria-label="Menu" aria-expanded="false">
@@ -960,8 +976,8 @@ footer {
   <a href="#evolution" onclick="closeMob()" class="nl-only">Evolutie</a>
   <a href="#demo" onclick="closeMob()">Demo</a>
   <a href="#faq" onclick="closeMob()">FAQ</a>
-  <a href="#beta" onclick="closeMob()" class="en-only" style="color:var(--green)">🚀 Join Beta</a>
-  <a href="#beta" onclick="closeMob()" class="nl-only" style="color:var(--green)">🚀 Meedoen</a>
+  <a href="#beta" onclick="closeMob()" class="en-only" style="color:var(--green)">🚀 Get the App</a>
+  <a href="#beta" onclick="closeMob()" class="nl-only" style="color:var(--green)">🚀 Download</a>
 </div>
 
 <!-- ====== HERO ====== -->
@@ -969,8 +985,8 @@ footer {
   <div class="hero-inner">
     <div class="hero-txt">
       <div class="hero-badge">
-        🔔 <span class="en-only">Beta · Android · iOS Coming Soon</span>
-              <span class="nl-only">Beta · Android · iOS Binnenkort</span>
+        🔔 <span class="en-only">Android · iOS Coming Soon</span>
+              <span class="nl-only">Android · iOS Binnenkort</span>
       </div>
       <div class="hero-trust">
         🛡️ <span class="en-only">100% Anonymous · Minimal Ads · Free Forever</span>
@@ -986,8 +1002,9 @@ footer {
       <p class="hero-sub nl-only">WeedStop gamificeert jouw stopreis met AI-coaching, wereldwijde leaderboards, avatar evolutie en 33.000+ kleurenthema's. Gratis. Anoniem. In 5 talen.</p>
 
       <div class="hero-btns">
-        <a href="mailto:stylixweedstop@gmail.com?subject=Beta%20tester" class="btn-primary en-only">📱 Join the Beta — Free</a>
-        <a href="mailto:stylixweedstop@gmail.com?subject=Beta%20tester" class="btn-primary nl-only">📱 Word Beta Tester — Gratis</a>
+        <a href="#beta" class="btn-primary en-only coming-soon">📱 Coming Soon to Google Play</a>
+        <a href="#beta" class="btn-primary nl-only coming-soon">📱 Binnenkort op Google Play</a>
+        <a href="WeedStop.apk" download class="btn-primary play-live" aria-label="Download WeedStop for Android"><span class="en-only">📱 Download for Android</span><span class="nl-only">📱 Download voor Android</span></a>
         <a href="#demo" class="btn-secondary en-only">Watch Demo ↓</a>
         <a href="#demo" class="btn-secondary nl-only">Bekijk Demo ↓</a>
       </div>
@@ -1580,44 +1597,48 @@ footer {
   <div class="s-inner rv">
     <div class="beta-wrap">
       <div class="beta-box">
-        <div class="eyebrow" style="text-align:center">
-          <span class="en-only">Closed Beta</span>
-          <span class="nl-only">Gesloten Beta</span>
+        <div class="eyebrow coming-soon" style="text-align:center">
+          <span class="en-only">Launching Soon</span>
+          <span class="nl-only">Binnenkort Live</span>
         </div>
-        <div class="section-title" style="text-align:center;margin-bottom:8px">
-          <span class="en-only">Become a Beta Tester 🚀</span>
-          <span class="nl-only">Word Beta Tester 🚀</span>
+        <div class="eyebrow play-live-block" style="text-align:center">
+          <span class="en-only">Now Available</span>
+          <span class="nl-only">Nu Beschikbaar</span>
+        </div>
+        <div class="section-title coming-soon" style="text-align:center;margin-bottom:8px">
+          <span class="en-only">Coming Soon to Google Play 🚀</span>
+          <span class="nl-only">Binnenkort op Google Play 🚀</span>
+        </div>
+        <div class="section-title play-live-block" style="text-align:center;margin-bottom:8px">
+          <span class="en-only">Download WeedStop for Android 🚀</span>
+          <span class="nl-only">Download WeedStop voor Android 🚀</span>
         </div>
         <p style="color:var(--gray2);font-size:.88rem;margin-bottom:4px">
-          <span class="en-only">Free · Anonymous · First access to all features</span>
-          <span class="nl-only">Gratis · Anoniem · Eerste toegang tot alle functies</span>
+          <span class="en-only">Free · Anonymous · Available on Android</span>
+          <span class="nl-only">Gratis · Anoniem · Beschikbaar op Android</span>
         </p>
 
-        <div class="beta-steps">
-          <div class="beta-step">
-            <div class="step-num">1</div>
-            <span class="en-only">Send an email to <strong style="color:var(--green)">stylixweedstop@gmail.com</strong></span>
-            <span class="nl-only">Stuur een e-mail naar <strong style="color:var(--green)">stylixweedstop@gmail.com</strong></span>
-          </div>
-          <div class="beta-step">
-            <div class="step-num">2</div>
-            <span class="en-only">Subject: <strong>"Beta tester"</strong> + your Android version</span>
-            <span class="nl-only">Onderwerp: <strong>"Beta tester"</strong> + jouw Android-versie</span>
-          </div>
-          <div class="beta-step">
-            <div class="step-num">3</div>
-            <span class="en-only">Receive your invite link within 24 hours</span>
-            <span class="nl-only">Ontvang jouw uitnodigingslink binnen 24 uur</span>
-          </div>
-        </div>
+        <p class="coming-soon" style="color:var(--gray2);font-size:.95rem;margin:18px auto 6px;max-width:520px">
+          <span class="en-only">WeedStop is launching on Google Play very soon. Follow us to be the first to know the moment it goes live.</span>
+          <span class="nl-only">WeedStop komt zeer binnenkort uit op Google Play. Volg ons en wees als eerste op de hoogte zodra hij live staat.</span>
+        </p>
+        <p class="play-live-block" style="color:var(--gray2);font-size:.95rem;margin:18px auto 6px;max-width:520px">
+          <span class="en-only">Download WeedStop free on Android. No account, no email — just tap install and start.</span>
+          <span class="nl-only">Download WeedStop gratis op Android. Geen account, geen e-mail — installeren en beginnen.</span>
+        </p>
 
-        <a href="mailto:stylixweedstop@gmail.com?subject=Beta%20tester" class="btn-primary" style="font-size:.95rem;padding:14px 38px">
-          <span class="en-only">📩 Sign Up as Beta Tester</span>
-          <span class="nl-only">📩 Aanmelden als Beta Tester</span>
+        <a href="https://www.instagram.com/weedstopapp" target="_blank" rel="noopener" class="btn-primary coming-soon" style="font-size:.95rem;padding:14px 38px">
+          <span class="en-only">🔔 Follow for Launch Updates</span>
+          <span class="nl-only">🔔 Volg voor Launch-updates</span>
         </a>
+        <a href="WeedStop.apk" download class="btn-primary play-live" style="font-size:.95rem;padding:14px 38px" aria-label="Download WeedStop for Android"><span class="en-only">📱 Download for Android (.apk)</span><span class="nl-only">📱 Download voor Android (.apk)</span></a>
+        <p class="play-live-block" style="margin-top:12px;font-size:.78rem;color:var(--gray2);max-width:460px;margin-left:auto;margin-right:auto">
+          <span class="en-only">After downloading, open the file and tap <strong>Install</strong>. If Android asks, allow installing from this source (Settings → “Install unknown apps”). This is normal for apps outside the Play Store.</span>
+          <span class="nl-only">Na het downloaden: open het bestand en tik op <strong>Installeren</strong>. Vraagt Android erom, sta dan installeren vanaf deze bron toe (Instellingen → “Onbekende apps installeren”). Dit is normaal voor apps buiten de Play Store.</span>
+        </p>
         <p style="margin-top:14px;font-size:.72rem;color:var(--gray)">
-          <span class="en-only">Or follow <strong style="color:var(--gray2)">@weedstopapp</strong> on Instagram / TikTok / X for updates</span>
-          <span class="nl-only">Of volg <strong style="color:var(--gray2)">@weedstopapp</strong> op Instagram / TikTok / X voor updates</span>
+          <span class="en-only">Follow <strong style="color:var(--gray2)">@weedstopapp</strong> on Instagram / TikTok / X</span>
+          <span class="nl-only">Volg <strong style="color:var(--gray2)">@weedstopapp</strong> op Instagram / TikTok / X</span>
         </p>
       </div>
     </div>
@@ -1664,8 +1685,8 @@ footer {
           <div class="fq-chevron">+</div>
         </div>
         <div class="fq-a">
-          <span class="en-only">WeedStop is currently in beta on Android (version 1.29). The full Android release is coming soon. iOS is planned for a future update.</span>
-          <span class="nl-only">WeedStop is momenteel in beta op Android (versie 1.29). De volledige Android-release komt binnenkort. iOS is gepland voor een toekomstige update.</span>
+          <span class="en-only">WeedStop is launching on Google Play very soon. iOS is planned for a future update.</span>
+          <span class="nl-only">WeedStop komt zeer binnenkort uit op Google Play. iOS is gepland voor een toekomstige update.</span>
         </div>
       </div>
 
@@ -1716,8 +1737,8 @@ footer {
     <img src="avatar_phase10.png" alt="WeedStop Avatar" class="cta-avatar" loading="lazy">
     <div class="section-title en-only">Ready to take back control?</div>
     <div class="section-title nl-only">Klaar om de controle terug te nemen?</div>
-    <p class="section-sub en-only" style="margin:10px auto 28px;text-align:center">Currently in beta. Join early and be part of the journey from the start.</p>
-    <p class="section-sub nl-only" style="margin:10px auto 28px;text-align:center">Momenteel in beta. Doe vroeg mee en maak deel uit van de reis vanaf het begin.</p>
+    <p class="section-sub en-only" style="margin:10px auto 28px;text-align:center">Launching on Google Play soon. Be part of the journey from the start.</p>
+    <p class="section-sub nl-only" style="margin:10px auto 28px;text-align:center">Binnenkort op Google Play. Maak deel uit van de reis vanaf het begin.</p>
     <a href="mailto:stylixweedstop@gmail.com" class="btn-primary" style="font-size:1rem;padding:15px 42px">
       <span class="en-only">📱 Join the Beta — Free</span>
       <span class="nl-only">📱 Meedoen — Gratis</span>
@@ -1739,8 +1760,8 @@ footer {
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="#" class="logo"><img class="logo-mark" src="/avatar_phase10.png" alt="WeedStop"><span class="g">Weed</span><span class="y">Stop</span></a>
-      <p class="en-only">The #1 free gamified cannabis sobriety app. Currently in beta — full Android release coming soon.</p>
-      <p class="nl-only">De #1 gratis gamified cannabis sobriety app. Momenteel in beta — volledige Android-release binnenkort.</p>
+      <p class="en-only">The #1 free gamified cannabis sobriety app. Launching on Google Play soon.</p>
+      <p class="nl-only">De #1 gratis gamified cannabis sobriety app. Binnenkort op Google Play.</p>
     </div>
     <div class="footer-col">
       <h4 class="en-only">Product</h4><h4 class="nl-only">Product</h4>
@@ -1759,7 +1780,7 @@ footer {
     </div>
   </div>
   <div class="footer-bot">
-    <span>© 2026 WeedStop · Beta v1.29</span>
+    <span>© 2026 WeedStop</span>
     <span class="en-only">Built by an ex-smoker from 🇳🇱</span>
     <span class="nl-only">Gebouwd door een ex-blower uit 🇳🇱</span>
     <span>stylixweedstop@gmail.com</span>
@@ -1888,101 +1909,10 @@ let lang = localStorage.getItem('ws-lang') || 'nl';
 function applyLang(l) {
   lang = l;
   localStorage.setItem('ws-lang', l);
-  document.body.className = 'lang-' + l;
+  var liveFlag = document.body.classList.contains('live') ? ' live' : '';
+  document.body.className = 'lang-' + l + liveFlag;
   document.documentElement.lang = l;
   document.getElementById('langBtn').textContent = l === 'nl' ? 'EN' : 'NL';
 }
 
-function toggleLang() { applyLang(lang === 'nl' ? 'en' : 'nl'); }
-
-applyLang(lang);
-
-/* ============================================
-   SCROLL PROGRESS BAR
-============================================ */
-const progressEl = document.getElementById('progress');
-window.addEventListener('scroll', () => {
-  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-  progressEl.style.width = Math.min(pct, 100) + '%';
-}, { passive: true });
-
-/* ============================================
-   NAV SHRINK ON SCROLL
-============================================ */
-const navbar = document.getElementById('navbar');
-const bttBtn = document.getElementById('btt');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-  bttBtn.classList.toggle('show', window.scrollY > 600);
-}, { passive: true });
-
-/* ============================================
-   MOBILE MENU
-============================================ */
-function toggleMob() {
-  const ham = document.getElementById('ham');
-  ham.classList.toggle('open');
-  document.getElementById('mobMenu').classList.toggle('open');
-  ham.setAttribute('aria-expanded', ham.classList.contains('open'));
-}
-function closeMob() {
-  document.getElementById('ham').classList.remove('open');
-  document.getElementById('ham').setAttribute('aria-expanded', 'false');
-  document.getElementById('mobMenu').classList.remove('open');
-}
-
-/* ============================================
-   SCROLL REVEAL
-============================================ */
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('v'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.rv').forEach(el => revealObs.observe(el));
-
-/* ============================================
-   SCROLL SPY — ACTIVE NAV LINK
-============================================ */
-(function() {
-  const sections = document.querySelectorAll('section[id]');
-  const navAs = document.querySelectorAll('#navLinks a');
-  const spyObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        navAs.forEach(a => a.classList.remove('active'));
-        const active = document.querySelector(`#navLinks a[href="#${e.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  sections.forEach(s => spyObs.observe(s));
-})();
-
-/* ============================================
-   FAQ ACCORDION
-============================================ */
-function toggleFaq(btn) {
-  const fq = btn.closest('.fq');
-  const isOpen = fq.classList.contains('open');
-  document.querySelectorAll('.fq.open').forEach(f => {
-    f.classList.remove('open');
-    f.querySelector('.fq-q').setAttribute('aria-expanded', 'false');
-  });
-  if (!isOpen) {
-    fq.classList.add('open');
-    btn.setAttribute('aria-expanded', 'true');
-  }
-}
-
-/* ============================================
-   BENTO SPOTLIGHT EFFECT
-============================================ */
-document.querySelectorAll('.bc').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
-    card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
-  });
-});
-</script>
-</body>
-</html>
+function toggl
