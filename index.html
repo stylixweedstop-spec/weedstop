@@ -1,1918 +1,831 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WeedStop — Free App to Quit Weed | Cannabis Sobriety Tracker</title>
-<meta name="description" content="Quit weed with WeedStop — the free gamified cannabis sobriety app. AI coaching, 12 mini-games, 200+ achievements, avatar evolution, and anonymous community support. Available for Android.">
-<meta name="keywords" content="quit weed, stop smoking weed, cannabis quit app, weed sobriety tracker, quit marijuana, stop weed app, cannabis addiction help, weed recovery app, quit cannabis free app">
-<link rel="canonical" href="https://weedstop.netlify.app/">
-<link rel="alternate" hreflang="en" href="https://weedstop.netlify.app/">
-<link rel="alternate" hreflang="nl" href="https://weedstop.netlify.app/">
-<link rel="alternate" hreflang="x-default" href="https://weedstop.netlify.app/">
-<meta property="og:title" content="WeedStop — Quit Weed for Free. Track Progress. Level Up.">
-<meta property="og:description" content="Free gamified app to quit weed. AI coach, 12 mini-games, global leaderboards, 10-phase avatar evolution. Coming soon to Google Play.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://weedstop.netlify.app/">
-<meta property="og:image" content="https://weedstop.netlify.app/avatar_phase10.png">
-<meta property="og:image:width" content="512">
-<meta property="og:image:height" content="512">
-<meta property="og:site_name" content="WeedStop">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="nl_NL">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WeedStop — Quit Weed for Free. Track Progress. Level Up.">
-<meta name="twitter:description" content="Free gamified app to quit weed. AI coach, 12 mini-games, global leaderboards, 10-phase avatar evolution. Coming soon to Google Play.">
-<meta name="twitter:image" content="https://weedstop.netlify.app/avatar_phase10.png">
-<meta name="robots" content="index, follow">
-<meta name="google-site-verification" content="uJcR--GCM5JCtoIveCqKuIGnzW8yWFhE4QOEyCj9hjM">
-<meta name="author" content="Aaron van Well — StyliX">
-<meta name="theme-color" content="#0a0f0a">
-<link rel="icon" type="image/png" href="/avatar_phase10.png">
-<link rel="apple-touch-icon" href="/avatar_phase10.png">
+<title>WeedStop — Free App to Quit Weed | Stoppen met blowen</title>
+<meta name="description" content="WeedStop — the free, gamified, 100% anonymous app to quit weed. Track your streak, save money, evolve your avatar, beat cravings with games and a 24/7 AI coach. Android.">
+<meta property="og:title" content="WeedStop — Quit weed, stay motivated">
+<meta property="og:description" content="Free · Anonymous · Gamified. Track your streak, save money, evolve your avatar. Download for Android.">
+<meta property="og:image" content="feature_graphic_1024x500.png">
+<meta name="theme-color" content="#3B9A32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="avatar_phase10.png">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "WeedStop",
-  "operatingSystem": "Android 8.0+",
-  "applicationCategory": "HealthApplication",
-  "applicationSubCategory": "Substance Abuse Recovery",
-  "description": "Free gamified app to quit weed. Features AI coaching, 12 mini-games with global leaderboards, 200+ achievements, 10-phase avatar evolution, and anonymous community support.",
-  "url": "https://weedstop.netlify.app/",
-  "downloadUrl": "https://play.google.com/store/apps/details?id=com.stylix.weedstop",
-  "screenshot": "https://weedstop.netlify.app/avatar_phase10.png",
-  "author": {
-    "@type": "Organization",
-    "name": "StyliX",
-    "email": "stylixweedstop@gmail.com"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  },
-  "softwareVersion": "1.29",
-  "inLanguage": ["en", "nl", "de", "es", "fr"],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "ratingCount": "1",
-    "bestRating": "5"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is WeedStop really 100% free?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, completely free forever. No subscriptions, no hidden costs, no credit card required. The points economy is entirely internal — you earn and spend within the app, no real money."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my data private?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Fully anonymous — no real name, no email verification, no data selling. Firebase anonymous authentication means your recovery journey stays completely private."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens if I relapse?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "WeedStop tracks your relapse count and adjusts daily point limits (100→50 pts). On the 3rd relapse you get the option for a full reset. Relapse is part of recovery — the app is built to help you through it, not to judge."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can WeedStop replace professional treatment?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. WeedStop is a supportive wellness tool — not a replacement for professional help. For serious addiction, consult a healthcare professional."
-      }
-    }
-  ]
-}
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="avatar_phase10.png">
 
 <style>
-/* ================================================
-   RESET & TOKENS
-================================================ */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+/* ══════════════════════════ TOKENS ══════════════════════════ */
+:root{
+  --cream:#FFF6E6; --cream2:#FCEBCF; --paper:#FFFDF7;
+  --bg1:#E7DABC; --bg2:#DBCEAB; --bg3:#D6CEA8; --bg4:#DFD4B2;
+  --ink:#243024; --ink2:#5C5142; --ink3:#9A8E7A;
+  --leaf:#5FC24C; --leaf-d:#3B9A32;
+  --gold:#FFC838; --gold-d:#EDA400;
+  --coral:#FF7A45; --coral-d:#E85C22;
+  --sky:#39A8E0; --plum:#B69BE4; --berry:#FF5C8A;
+  --sh:6px 6px 0 var(--ink);
+  --sh-sm:4px 4px 0 var(--ink);
+  --sh-lg:9px 9px 0 var(--ink);
+  --bw:3px;
+  --ease:cubic-bezier(.34,1.56,.64,1);
+  --ease2:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  margin:0;color:var(--ink);overflow-x:hidden;
+  font-family:Nunito,system-ui,-apple-system,Segoe UI,sans-serif;font-size:16.5px;line-height:1.65;font-weight:600;
+  background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 30%,var(--bg3) 62%,var(--bg4) 100%);
+  background-attachment:fixed;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--leaf-d);text-decoration:none}
+h1,h2,h3,h4{margin:0 0 .5em;line-height:1.2;font-family:'Baloo 2',Nunito,cursive;font-weight:800;letter-spacing:-.015em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+::selection{background:var(--gold);color:var(--ink)}
 
-:root {
-  --bg:     #060c06;
-  --bg2:    #09120a;
-  --bg3:    #0c1a0c;
-  --green:  #81C784;
-  --gd:     #4CAF50;
-  --g2:     #2E7D32;
-  --g3:     #1B5E20;
-  --gold:   #FFD700;
-  --gold2:  #FFC107;
-  --white:  #edf0ed;
-  --gray:   #6b726b;
-  --gray2:  #a4a9a4;
-  --card:   rgba(10,20,10,0.8);
-  --border: rgba(76,175,80,0.12);
-  --bord2:  rgba(76,175,80,0.28);
-  --r:      16px;
-  --r-sm:   10px;
-}
+/* ══════════════════════════ PRELOADER ══════════════════════════ */
+#pre{position:fixed;inset:0;z-index:9999;background:linear-gradient(180deg,var(--bg1),var(--bg3));
+  display:grid;place-items:center;transition:opacity .7s var(--ease2),visibility .7s}
+#pre.gone{opacity:0;visibility:hidden}
+.pball{width:80px;height:80px;margin:0 auto 22px;border-radius:50%;position:relative;
+  border:var(--bw) solid var(--ink);overflow:hidden;background:var(--leaf);
+  box-shadow:var(--sh);animation:bounce 1s var(--ease) infinite}
+.pball::after{content:"🌱";position:absolute;inset:0;display:grid;place-items:center;font-size:2rem}
+@keyframes bounce{0%,100%{transform:translateY(0) scale(1,1)}45%,55%{transform:translateY(-32px) scale(.94,1.06)}90%{transform:translateY(0) scale(1.06,.94)}}
+.pre-t{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.05rem;color:var(--ink);text-align:center;letter-spacing:.02em}
+.prebar{width:200px;height:14px;background:var(--paper);border:var(--bw) solid var(--ink);border-radius:99px;
+  margin:14px auto 0;overflow:hidden;box-shadow:var(--sh-sm)}
+.prebar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--leaf),var(--gold),var(--coral));transition:width .3s}
 
-html { scroll-behavior: smooth; background: var(--bg); overflow-x: hidden; }
+/* ══════════════════════════ WEBGL / CURSOR / PROGRESS ══════════════════════════ */
+#webgl{position:fixed;inset:0;z-index:0;pointer-events:none}
+#webgl canvas{display:block;width:100%;height:100%}
+.cur{position:fixed;top:0;left:0;z-index:9998;pointer-events:none;width:30px;height:30px;margin:-15px 0 0 -15px;
+  border-radius:50%;border:var(--bw) solid var(--ink);background:rgba(255,200,56,.4);
+  transition:width .22s var(--ease),height .22s var(--ease),margin .22s var(--ease),background .22s}
+.cur.big{width:62px;height:62px;margin:-31px 0 0 -31px;background:rgba(95,194,76,.4)}
+@media(hover:none),(max-width:900px){.cur{display:none}}
+#prog{position:fixed;top:0;left:0;height:6px;z-index:99;width:0;
+  background:linear-gradient(90deg,var(--leaf),var(--gold),var(--coral));border-bottom:2px solid var(--ink)}
 
-body {
-  font-family: 'DM Sans', system-ui, sans-serif;
-  color: var(--white);
-  background: var(--bg);
-  line-height: 1.65;
-  overflow-x: hidden;
-}
+/* ══════════════════════════ NAV ══════════════════════════ */
+nav{position:fixed;top:0;left:0;right:0;z-index:90;transition:.4s var(--ease2)}
+nav.solid .navin{background:var(--cream);border-color:var(--ink);box-shadow:0 5px 0 var(--ink)}
+.navin{display:flex;align-items:center;gap:14px;max-width:1180px;margin:14px auto 0;padding:9px 16px;
+  border:var(--bw) solid transparent;border-radius:20px;transition:.4s var(--ease2)}
+.brand{display:flex;align-items:center;gap:10px;font-family:'Baloo 2',cursive;font-weight:800;font-size:1.2rem;color:var(--ink)}
+.brand img{height:40px;width:40px;object-fit:contain;display:block;filter:drop-shadow(2px 2px 0 rgba(36,48,36,.25))}
+.brand .btxt{white-space:nowrap}
+.brand .btxt em{font-style:normal;color:var(--leaf-d)}
+.navlinks{margin-left:auto;display:flex;gap:3px}
+.navlinks a{color:var(--ink);font-weight:800;font-size:.92rem;padding:8px 14px;border-radius:12px;
+  border:2px solid transparent;transition:.2s var(--ease)}
+.navlinks a:hover{background:var(--gold);border-color:var(--ink);transform:translateY(-2px);box-shadow:3px 3px 0 var(--ink)}
+.langbtn{margin-left:auto;font-family:'Baloo 2',cursive;font-weight:800;font-size:.82rem;cursor:pointer;
+  padding:8px 14px;border-radius:12px;border:var(--bw) solid var(--ink);background:var(--paper);
+  box-shadow:var(--sh-sm);transition:.2s var(--ease)}
+.langbtn:hover{background:var(--gold);transform:translate(-1px,-2px);box-shadow:var(--sh)}
+.navlinks + .langbtn{margin-left:6px}
+.navdl{display:inline-flex;align-items:center;gap:7px;font-family:'Baloo 2',cursive;font-weight:800;font-size:.9rem;
+  padding:9px 18px;border-radius:14px;border:var(--bw) solid var(--ink);background:var(--leaf);color:var(--ink);
+  box-shadow:var(--sh-sm);transition:.2s var(--ease);white-space:nowrap}
+.navdl:hover{transform:translate(-2px,-2px);box-shadow:var(--sh);color:var(--ink)}
+@media(max-width:960px){.navlinks{display:none}.brand .btxt{display:none}.langbtn{margin-left:auto}}
 
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+/* ══════════════════════════ HERO ══════════════════════════ */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;padding:150px 0 110px;overflow:hidden}
+.hero .wrap{width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.ribbon{display:inline-block;font-family:'Baloo 2',cursive;font-weight:800;font-size:.84rem;letter-spacing:.08em;
+  text-transform:uppercase;background:var(--gold);color:var(--ink);padding:7px 20px;border-radius:99px;
+  border:var(--bw) solid var(--ink);box-shadow:var(--sh-sm);margin-bottom:20px;transform:rotate(-1.6deg)}
+.hero h1{font-size:clamp(2.6rem,7vw,5.6rem);line-height:1.02;margin:0 0 6px;padding-bottom:.06em;letter-spacing:-.03em;
+  color:var(--paper);-webkit-text-stroke:clamp(3px,.7vw,6px) var(--ink);paint-order:stroke fill;
+  text-shadow:0 8px 0 rgba(36,48,36,.22)}
+.hero h1 .b{display:block;color:var(--gold)}
+.heroline{font-size:clamp(1rem,1.6vw,1.18rem);max-width:52ch;margin:22px 0 26px;font-weight:700;color:var(--ink);
+  background:rgba(255,253,247,.85);padding:15px 20px;border-radius:18px;border:var(--bw) solid var(--ink);
+  box-shadow:var(--sh-sm);backdrop-filter:blur(3px)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.chip3{font-family:'Baloo 2',cursive;font-weight:700;font-size:.85rem;padding:8px 15px;border-radius:14px;
+  border:var(--bw) solid var(--ink);background:var(--paper);box-shadow:var(--sh-sm);transition:.22s var(--ease);cursor:default}
+.chip3:hover{transform:translate(-2px,-3px) rotate(-1.5deg);box-shadow:var(--sh)}
+.chip3.c1{background:var(--leaf)}.chip3.c2{background:var(--gold)}.chip3.c3{background:var(--coral)}
+.chip3.c4{background:var(--sky)}.chip3.c5{background:var(--plum)}
+.slab{display:flex;flex-wrap:wrap;align-items:center;gap:16px;max-width:560px;
+  padding:20px 22px;border-radius:24px;background:var(--cream);
+  border:var(--bw) solid var(--ink);box-shadow:var(--sh-lg)}
+.slab .lbl{font-family:'Baloo 2',cursive;font-weight:800;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.slab .big-t{font-family:'Baloo 2',cursive;font-size:clamp(1.2rem,3vw,1.6rem);font-weight:800;line-height:1.15}
+.slab .sub{font-size:.82rem;color:var(--ink2);font-weight:700}
+.hero-art{position:relative;display:grid;place-items:center;min-height:340px}
+.hero-art img{max-width:min(420px,80%);width:100%;height:auto;display:block;
+  filter:drop-shadow(6px 8px 0 rgba(36,48,36,.28));animation:float 5s ease-in-out infinite}
+.hero-art .coin-badge{position:absolute;top:8%;right:6%;background:var(--gold);border:var(--bw) solid var(--ink);
+  border-radius:99px;padding:8px 16px;font-family:'Baloo 2',cursive;font-weight:800;box-shadow:var(--sh);transform:rotate(6deg);animation:float 6s ease-in-out infinite}
+.hero-art .streak-badge{position:absolute;bottom:10%;left:2%;background:var(--paper);border:var(--bw) solid var(--ink);
+  border-radius:16px;padding:8px 15px;font-family:'Baloo 2',cursive;font-weight:800;box-shadow:var(--sh);transform:rotate(-5deg);animation:float 5.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-11px) rotate(.6deg)}}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+  font-family:'Baloo 2',cursive;font-weight:800;font-size:1.02rem;padding:13px 26px;border-radius:16px;
+  border:var(--bw) solid var(--ink);background:var(--gold);color:var(--ink);box-shadow:var(--sh);
+  transition:transform .16s var(--ease),box-shadow .16s var(--ease),background .2s;text-align:center}
+.btn:hover{transform:translate(-2px,-3px);box-shadow:var(--sh-lg);color:var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn.ghost{background:var(--paper)}
+.btn.ok{background:var(--leaf)}
+.btn.coral{background:var(--coral)}
+.scrollcue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;text-align:center;
+  font-family:'Baloo 2',cursive;font-weight:800;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.scrollcue i{display:block;width:34px;height:34px;margin:6px auto 0;border-radius:50%;background:var(--paper);
+  border:var(--bw) solid var(--ink);box-shadow:var(--sh-sm);animation:hop 1.5s ease-in-out infinite;
+  background-image:linear-gradient(var(--ink),var(--ink));background-size:12px 2.5px;background-repeat:no-repeat;background-position:center}
+@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1;min-height:240px}.hero-art img{max-width:min(300px,70%)}}
 
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--g2); border-radius: 3px; }
+/* ══════════════════════════ TICKER ══════════════════════════ */
+.ticker{overflow:hidden;position:relative;z-index:3;padding:9px 0;width:100%}
+.ticker .band{background:var(--leaf);border-top:var(--bw) solid var(--ink);border-bottom:var(--bw) solid var(--ink);
+  padding:11px 0;overflow:hidden;transform:rotate(-.7deg) scale(1.04)}
+.ticker .run{display:flex;gap:34px;width:max-content;animation:run 30s linear infinite}
+.ticker:hover .run{animation-play-state:paused}
+@keyframes run{to{transform:translateX(-50%)}}
+.ticker span{display:inline-flex;align-items:center;gap:10px;font-family:'Baloo 2',cursive;font-weight:700;font-size:1rem;color:var(--ink);white-space:nowrap}
+.ticker span::after{content:"★";color:var(--ink);opacity:.5}
 
-/* lang helpers */
-body.lang-en .nl-only { display: none !important; }
-body.lang-nl .en-only { display: none !important; }
+/* ══════════════════════════ SECTIONS ══════════════════════════ */
+main{position:relative;z-index:2;background:linear-gradient(180deg,var(--bg3) 0%,var(--bg4) 22%,var(--bg4) 78%,var(--bg3) 100%)}
+section{padding:clamp(64px,9vw,120px) 0;position:relative;z-index:2}
+.shead{max-width:62ch;margin-bottom:44px}
+.eyebrow{display:inline-block;font-family:'Baloo 2',cursive;font-weight:800;font-size:.82rem;letter-spacing:.13em;
+  text-transform:uppercase;background:var(--gold);color:var(--ink);padding:5px 16px;border-radius:99px;
+  border:var(--bw) solid var(--ink);box-shadow:var(--sh-sm);margin-bottom:16px;transform:rotate(-1.2deg)}
+h2.big{font-size:clamp(2rem,5vw,3.5rem);margin:0 0 14px;color:var(--ink)}
+h2.big em{font-style:normal;color:var(--leaf-d);-webkit-text-stroke:2px var(--ink);paint-order:stroke fill}
+.lead{color:var(--ink2);font-size:1.05rem;font-weight:700;margin:0}
+.rv{opacity:0;transform:translateY(34px) scale(.97);transition:opacity .7s var(--ease2),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
 
-/* ================================================
-   SCROLL PROGRESS BAR
-================================================ */
-#progress {
-  position: fixed; top: 0; left: 0;
-  height: 2px; width: 0%;
-  background: linear-gradient(90deg, var(--g3), var(--green), var(--gold));
-  z-index: 300; transition: width .1s linear;
-  box-shadow: 0 0 8px rgba(129,199,132,.4);
-}
+/* ══════════════════════════ ORBS ══════════════════════════ */
+.orbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:18px}
+.orb{padding:26px 20px;border-radius:24px;text-align:center;background:var(--paper);
+  border:var(--bw) solid var(--ink);box-shadow:var(--sh);transition:.25s var(--ease)}
+.orb:nth-child(1){background:var(--gold)}.orb:nth-child(2){background:var(--leaf)}
+.orb:nth-child(3){background:var(--sky)}.orb:nth-child(4){background:var(--coral)}
+.orb:hover{transform:translate(-3px,-5px) rotate(-1.5deg);box-shadow:var(--sh-lg)}
+.orb .n{font-family:'Baloo 2',cursive;font-size:clamp(2rem,4.2vw,2.9rem);font-weight:800;line-height:1.05;
+  -webkit-text-stroke:2.5px var(--ink);paint-order:stroke fill;color:var(--paper)}
+.orb .k{font-family:'Baloo 2',cursive;font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
 
-/* ================================================
-   NAVIGATION
-================================================ */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  padding: 14px 32px;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  background: rgba(6,12,6,.88);
-  backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid var(--border);
-  transition: padding .3s;
-}
-nav.scrolled { padding: 10px 32px; }
+/* ══════════════════════════ TILT CARDS ══════════════════════════ */
+.deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:20px;perspective:1300px}
+.tc{position:relative;padding:26px 24px 28px;border-radius:26px;background:var(--paper);
+  border:var(--bw) solid var(--ink);box-shadow:var(--sh);transform-style:preserve-3d;will-change:transform;overflow:hidden}
+.tc .glare{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(300px circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.7),transparent 62%)}
+.tc:hover .glare{opacity:1}
+.tc .ic{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:1.85rem;
+  border:var(--bw) solid var(--ink);margin-bottom:16px;transform:translateZ(46px);box-shadow:var(--sh-sm)}
+.tc:nth-child(4n+1) .ic{background:var(--gold)}.tc:nth-child(4n+2) .ic{background:var(--leaf)}
+.tc:nth-child(4n+3) .ic{background:var(--coral)}.tc:nth-child(4n+4) .ic{background:var(--sky)}
+.tc h3{font-size:1.26rem;margin:0 0 7px;transform:translateZ(30px)}
+.tc p{margin:0;color:var(--ink2);font-size:.95rem;font-weight:700;transform:translateZ(15px)}
+.tc .num{position:absolute;top:14px;right:20px;font-family:'Baloo 2',cursive;font-size:2.6rem;font-weight:800;color:var(--ink);opacity:.09;transform:translateZ(6px)}
 
-.logo {
-  display: flex; align-items: center; gap: 6px;
-  font-weight: 800; font-size: clamp(1.1rem,2vw,1.3rem);
-  letter-spacing: -.02em; flex-shrink: 0;
-}
-.logo .g { color: var(--green); }
-.logo .y { color: var(--gold); }
-.logo-mark { height: 1.8em; width: auto; border-radius: 7px; display: block; }
+/* ══════════════════════════ 3D CAROUSEL (AVATARS) ══════════════════════════ */
+.stagewrap{position:relative;z-index:2}
+.stage{position:relative;height:clamp(360px,52vw,540px);perspective:1600px;perspective-origin:50% 48%}
+.ring{position:absolute;top:50%;left:50%;width:0;height:0;transform-style:preserve-3d;transition:transform .85s var(--ease2)}
+.ring.drag{transition:none}
+.slide{position:absolute;transform-style:preserve-3d;backface-visibility:hidden;border-radius:24px;overflow:hidden;
+  border:var(--bw) solid var(--ink);box-shadow:var(--sh);transition:box-shadow .4s,filter .4s;
+  background:linear-gradient(160deg,var(--cream),var(--cream2))}
+.slide:nth-child(5n+1){background:linear-gradient(160deg,#EFFBEA,#D9F2CF)}
+.slide:nth-child(5n+2){background:linear-gradient(160deg,#FFF6DD,#FFE9B0)}
+.slide:nth-child(5n+3){background:linear-gradient(160deg,#FFEDE2,#FFD9C2)}
+.slide:nth-child(5n+4){background:linear-gradient(160deg,#E5F4FC,#C7E8F8)}
+.slide:nth-child(5n+5){background:linear-gradient(160deg,#F1EBFB,#DFD0F3)}
+.slide img{width:100%;height:82%;object-fit:contain;display:block;padding:14px 10px 0;filter:brightness(.94);transition:filter .4s}
+.slide.act{box-shadow:var(--sh-lg)}
+.slide.act img{filter:brightness(1.04)}
+.slide .cap{position:absolute;left:8px;right:8px;bottom:8px;padding:6px 10px;border-radius:12px;
+  background:var(--gold);border:2.5px solid var(--ink);font-family:'Baloo 2',cursive;font-weight:800;font-size:.82rem;
+  text-align:center;opacity:0;transform:translateY(8px);transition:.35s var(--ease)}
+.slide .cap b{display:block;font-size:.7rem;opacity:.7;letter-spacing:.06em}
+.slide.act .cap{opacity:1;transform:none}
+.stagectl{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px;flex-wrap:wrap}
+.arw{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;cursor:pointer;
+  background:var(--paper);border:var(--bw) solid var(--ink);color:var(--ink);box-shadow:var(--sh-sm);transition:.2s var(--ease)}
+.arw:hover{background:var(--gold);transform:translate(-2px,-3px);box-shadow:var(--sh)}
+.arw:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.dots{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;max-width:320px}
+.dots b{width:11px;height:11px;border-radius:50%;background:var(--paper);border:2.5px solid var(--ink);cursor:pointer;transition:.25s var(--ease)}
+.dots b.on{background:var(--leaf-d);transform:scale(1.35)}
+.hint{text-align:center;font-family:'Baloo 2',cursive;font-weight:700;font-size:.86rem;color:var(--ink2);margin-top:14px}
+.stage-shot{height:clamp(400px,58vw,600px)}
+.slide.shot img{height:100%;padding:0;object-fit:cover;filter:brightness(.9)}
+.slide.shot.act img{filter:brightness(1.02)}
 
-/* ===== GO-LIVE TOGGLE =====
-   To switch the whole site from "Coming soon" to the live Google Play download,
-   add the word  live  to the <body> class, i.e.  <body class="lang-nl live">.
-   Everything with .play-live / .play-live-block appears, and .coming-soon hides. */
-.play-live, .play-live-block { display: none !important; }
-body.live .play-live { display: inline-flex !important; }
-body.live .play-live-block { display: block !important; }
-body.live .coming-soon { display: none !important; }
-.gplay-badge { display: inline-flex; align-items: center; gap: 11px; background: #000;
-  color: #fff; border: 1px solid #333; border-radius: 12px; padding: 10px 20px;
-  text-decoration: none; line-height: 1.15; transition: transform .15s, box-shadow .15s; }
-.gplay-badge:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,.4); }
-.gplay-badge svg { width: 26px; height: 26px; flex-shrink: 0; }
-.gplay-badge small { display: block; font-size: .62rem; font-weight: 500; opacity: .85; letter-spacing: .04em; }
-.gplay-badge b { display: block; font-size: 1.08rem; font-weight: 800; letter-spacing: .01em; }
+/* ══════════════════════════ SCREENS ══════════════════════════ */
+.screens{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.phone{width:clamp(118px,19vw,166px);border-radius:22px;overflow:hidden;border:var(--bw) solid var(--ink);box-shadow:var(--sh);
+  background:var(--ink);transition:.28s var(--ease)}
+.phone img{width:100%;height:100%;object-fit:cover;display:block}
+.phone:hover{transform:translateY(-7px) rotate(-1.4deg);box-shadow:var(--sh-lg)}
 
-.nav-links {
-  display: flex; gap: 26px; list-style: none;
-  flex: 1; justify-content: center;
-}
-.nav-links a {
-  color: var(--gray2); font-size: .84rem; font-weight: 500;
-  transition: color .2s; position: relative;
-}
-.nav-links a::after {
-  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
-  height: 1px; background: var(--green);
-  transform: scaleX(0); transition: transform .2s; transform-origin: left;
-}
-.nav-links a:hover { color: var(--green); }
-.nav-links a:hover::after { transform: scaleX(1); }
-.nav-links a.active { color: var(--green); }
-.nav-links a.active::after { transform: scaleX(1); }
+/* ══════════════════════════ PANELS / STEPS ══════════════════════════ */
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(315px,1fr));gap:22px}
+.panel{border-radius:26px;padding:28px 26px;background:var(--paper);border:var(--bw) solid var(--ink);box-shadow:var(--sh)}
+.panel > h3{display:flex;align-items:center;gap:11px;flex-wrap:wrap;font-size:1.3rem;margin:0 0 18px}
+.panel .plt{font-family:'Baloo 2',cursive;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;
+  padding:4px 12px;border-radius:99px;border:2.5px solid var(--ink);background:var(--gold)}
+ol.steps{list-style:none;counter-reset:s;padding:0;margin:0}
+ol.steps li{counter-increment:s;position:relative;padding:14px 0 14px 54px;border-bottom:2.5px dashed rgba(36,48,36,.16);transition:padding-left .25s var(--ease)}
+ol.steps li:last-child{border-bottom:none}
+ol.steps li:hover{padding-left:62px}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:14px;width:34px;height:34px;border-radius:12px;
+  display:grid;place-items:center;font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;
+  background:var(--leaf);border:2.5px solid var(--ink);box-shadow:2.5px 2.5px 0 var(--ink)}
+ol.steps b{display:block;font-family:'Baloo 2',cursive;font-size:1.05rem;margin-bottom:0}
+ol.steps p{margin:0;color:var(--ink2);font-size:.92rem;font-weight:700}
+.callout{border-radius:24px;padding:24px 26px;background:var(--gold);border:var(--bw) solid var(--ink);box-shadow:var(--sh);margin-top:22px}
+.callout b{font-family:'Baloo 2',cursive;font-size:1.12rem}
+.callout p{margin:.35rem 0 0;font-size:.95rem;font-weight:700}
 
-.nav-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+/* ══════════════════════════ FLIP FAQ ══════════════════════════ */
+.flips{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;perspective:1600px}
+.flip{height:210px;transform-style:preserve-3d;transition:transform .7s var(--ease2);cursor:pointer;position:relative}
+.flip.turn{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:24px;padding:22px;
+  border:var(--bw) solid var(--ink);box-shadow:var(--sh);display:flex;flex-direction:column}
+.flip .f{background:var(--paper);justify-content:space-between}
+.flip .b{transform:rotateY(180deg);background:var(--leaf);justify-content:center}
+.flip .rn{font-family:'Baloo 2',cursive;font-size:2.4rem;font-weight:800;color:var(--ink);opacity:.14;line-height:1}
+.flip .f b{display:block;font-family:'Baloo 2',cursive;font-size:1.12rem;line-height:1.25}
+.flip .b p{margin:0;font-size:.94rem;font-weight:700;line-height:1.55}
+.flip .b .lbl{font-family:'Baloo 2',cursive;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:8px;opacity:.75}
 
-.lang-btn {
-  background: rgba(76,175,80,.08); border: 1px solid var(--bord2);
-  color: var(--green); padding: 5px 13px; border-radius: 50px;
-  font-size: .77rem; font-weight: 700; cursor: pointer;
-  transition: background .2s; font-family: inherit; letter-spacing: .04em;
-}
-.lang-btn:hover { background: rgba(76,175,80,.18); }
+/* ══════════════════════════ CTA / FOOTER ══════════════════════════ */
+.cta{text-align:center;padding:clamp(52px,8vw,92px) 30px;border-radius:34px;position:relative;overflow:hidden;
+  background:var(--cream);border:var(--bw) solid var(--ink);box-shadow:var(--sh-lg)}
+.cta img.mascot{max-width:150px;margin:0 auto 10px;display:block;filter:drop-shadow(4px 5px 0 rgba(36,48,36,.25))}
+.cta h2{font-size:clamp(1.9rem,5vw,3.1rem);margin:0 0 12px;position:relative;color:var(--paper);
+  -webkit-text-stroke:clamp(2.5px,.5vw,5px) var(--ink);paint-order:stroke fill}
+.cta p{margin:0 0 26px;font-weight:700;position:relative;color:var(--ink);
+  background:rgba(255,253,247,.8);display:inline-block;padding:8px 18px;border-radius:14px;border:2.5px solid var(--ink)}
+.cta .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+footer{padding:44px 0 60px;border-top:var(--bw) solid var(--ink);position:relative;z-index:2;background:var(--cream)}
+.fin{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:flex-start;font-size:.88rem;font-weight:700;color:var(--ink2)}
+.fin .fb{font-family:'Baloo 2',cursive;color:var(--ink);font-weight:800;font-size:1.2rem;margin-bottom:4px}
+.fin a{color:var(--leaf-d)}
 
-.nav-cta {
-  background: var(--g2); color: #fff; padding: 8px 22px;
-  border-radius: 50px; font-weight: 700; font-size: .82rem;
-  transition: all .2s; white-space: nowrap;
-}
-.nav-cta:hover { background: var(--gd); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(76,175,80,.22); }
+.toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,30px);z-index:9997;
+  background:var(--leaf);color:var(--ink);font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;
+  padding:13px 28px;border-radius:18px;border:var(--bw) solid var(--ink);box-shadow:var(--sh);
+  opacity:0;transition:.3s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
 
-.ham {
-  display: none; cursor: pointer; flex-direction: column;
-  gap: 4px; padding: 4px; flex-shrink: 0;
-}
-.ham span { width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all .3s; }
-.ham.open span:nth-child(1) { transform: rotate(45deg) translate(4px,4px); }
-.ham.open span:nth-child(2) { opacity: 0; }
-.ham.open span:nth-child(3) { transform: rotate(-45deg) translate(4px,-4px); }
-
-.mobile-menu {
-  display: none; position: fixed; top: 57px; left: 0; right: 0; z-index: 199;
-  background: rgba(6,12,6,.98); backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border); padding: 20px 24px;
-  flex-direction: column; gap: 4px;
-}
-.mobile-menu.open { display: flex; }
-.mobile-menu a {
-  color: var(--gray2); font-size: .92rem; font-weight: 500;
-  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.05);
-  transition: color .2s;
-}
-.mobile-menu a:hover { color: var(--green); }
-.mobile-menu a:last-child { border-bottom: none; }
-
-/* ================================================
-   HERO
-================================================ */
-.hero {
-  min-height: 100vh; display: flex; align-items: center;
-  padding: 110px 32px 70px; position: relative; overflow: hidden;
-}
-
-/* Aurora layers */
-.hero::before {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse at 18% 45%, rgba(46,125,50,.20) 0%, transparent 52%),
-    radial-gradient(ellipse at 82% 55%, rgba(255,193,7,.07)  0%, transparent 48%),
-    radial-gradient(ellipse at 52% 12%, rgba(76,175,80,.10)  0%, transparent 58%),
-    radial-gradient(ellipse at 38% 88%, rgba(76,175,80,.08)  0%, transparent 44%);
-  animation: aurora 14s ease-in-out infinite alternate;
-}
-@keyframes aurora {
-  0%   { transform: scale(1)    rotate(0deg);  opacity: 1; }
-  50%  { transform: scale(1.06) rotate(2deg);  opacity: .88; }
-  100% { transform: scale(.97)  rotate(-1deg); opacity: .94; }
-}
-
-.hero-inner {
-  max-width: 1120px; margin: 0 auto; width: 100%;
-  display: grid; grid-template-columns: 1.2fr .8fr;
-  gap: 64px; align-items: center; position: relative; z-index: 1;
-}
-
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: rgba(255,215,0,.08); border: 1px solid rgba(255,215,0,.25);
-  padding: 5px 14px; border-radius: 50px;
-  font-size: .71rem; color: var(--gold); font-weight: 600;
-  margin-bottom: 10px; letter-spacing: .02em;
-}
-.hero-trust {
-  display: block;
-  background: rgba(76,175,80,.07); border: 1px solid rgba(76,175,80,.2);
-  padding: 5px 14px; border-radius: 50px;
-  font-size: .7rem; color: var(--green); font-weight: 500;
-  margin-bottom: 22px; width: fit-content;
-}
-
-.hero h1 {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(2.2rem, 4.5vw, 4rem); line-height: 1.08;
-  margin-bottom: 18px; letter-spacing: -.02em;
-}
-.hero h1 .g { color: var(--green); }
-.hero h1 .y { color: var(--gold); }
-
-.hero-sub {
-  color: var(--gray2); font-size: clamp(.875rem,1.6vw,1rem);
-  max-width: 460px; margin-bottom: 32px; line-height: 1.75;
-}
-
-.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 38px; }
-
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: var(--g2); color: #fff;
-  padding: 13px 30px; border-radius: 50px;
-  font-weight: 700; font-size: .9rem;
-  transition: all .25s; white-space: nowrap;
-  border: 2px solid transparent; position: relative; overflow: hidden;
-}
-.btn-primary::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,.12), transparent);
-  opacity: 0; transition: opacity .25s;
-}
-.btn-primary:hover { background: var(--gd); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(76,175,80,.28); }
-.btn-primary:hover::after { opacity: 1; }
-
-.btn-secondary {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: transparent; color: var(--green);
-  padding: 13px 30px; border-radius: 50px;
-  font-weight: 600; font-size: .9rem;
-  border: 1px solid rgba(76,175,80,.3); transition: all .25s; white-space: nowrap;
-}
-.btn-secondary:hover { background: rgba(76,175,80,.08); border-color: rgba(76,175,80,.5); }
-
-.hero-stats { display: flex; gap: 34px; }
-.stat-num {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(1.3rem,2.2vw,1.65rem); font-weight: 800;
-  color: var(--green); line-height: 1;
-}
-.stat-lbl {
-  font-size: .63rem; color: var(--gray);
-  text-transform: uppercase; letter-spacing: 1.5px; margin-top: 4px;
-}
-
-/* Hero visual */
-.hero-visual {
-  display: flex; justify-content: center;
-  align-items: center; position: relative;
-}
-.hero-glow {
-  position: absolute;
-  width: min(400px,90vw); height: min(400px,90vw);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(76,175,80,.15), transparent 70%);
-  filter: blur(50px);
-  animation: pulse 5s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%,100% { transform: scale(1); opacity: .8; }
-  50%      { transform: scale(1.12); opacity: 1; }
-}
-.hero-avatar {
-  width: min(280px,62vw); position: relative; z-index: 2;
-  animation: float 6.5s ease-in-out infinite;
-  filter: drop-shadow(0 24px 50px rgba(76,175,80,.22));
-}
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50%      { transform: translateY(-14px); }
-}
-
-/* ================================================
-   SECTION UTILITIES
-================================================ */
-section { padding: 88px 32px; overflow: hidden; scroll-margin-top: 72px; }
-.s-alt { background: var(--bg2); }
-.s-inner { max-width: 1120px; margin: 0 auto; }
-
-.eyebrow {
-  font-size: clamp(.64rem,1.2vw,.72rem);
-  color: var(--gd); text-transform: uppercase;
-  letter-spacing: 2.5px; font-weight: 700; margin-bottom: 8px;
-}
-.section-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(1.75rem,3.5vw,2.8rem);
-  line-height: 1.15; margin-bottom: 14px; letter-spacing: -.01em;
-}
-.section-sub {
-  color: var(--gray2); font-size: clamp(.875rem,1.5vw,.97rem);
-  max-width: 530px; line-height: 1.75; margin-bottom: 44px;
-}
-
-/* ================================================
-   FEATURES — BENTO GRID
-================================================ */
-.bento {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 13px;
-}
-.bc {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--r); padding: 26px 24px;
-  position: relative; overflow: hidden;
-  transition: border-color .3s, transform .3s;
-}
-.bc:hover { border-color: var(--bord2); transform: translateY(-3px); }
-
-/* Spotlight effect */
-.bc::before {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(76,175,80,.07), transparent 60%);
-  opacity: 0; transition: opacity .3s;
-}
-.bc:hover::before { opacity: 1; }
-
-.bc-wide  { grid-column: span 2; }
-.bc-full  { grid-column: span 3; }
-.bc-icon  { font-size: 1.85rem; margin-bottom: 14px; display: block; }
-.bc h3    { font-size: clamp(.94rem,1.5vw,1.05rem); font-weight: 700; margin-bottom: 8px; }
-.bc p     { color: var(--gray2); font-size: clamp(.78rem,1.2vw,.85rem); line-height: 1.65; }
-
-.bc-num {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(2rem,3.5vw,2.8rem); font-weight: 800;
-  color: var(--green); line-height: 1; margin-bottom: 4px;
-}
-.bc-num.gold { color: var(--gold); }
-
-.bc-tag {
-  display: inline-flex; align-items: center; gap: 4px;
-  background: rgba(76,175,80,.08); border: 1px solid rgba(76,175,80,.2);
-  color: var(--green); padding: 3px 10px; border-radius: 50px;
-  font-size: .67rem; font-weight: 600; margin-top: 10px;
-}
-
-/* ================================================
-   GAMES
-================================================ */
-.games-split {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
-}
-.games-col > h3 {
-  font-size: .72rem; text-transform: uppercase;
-  letter-spacing: 2px; font-weight: 700;
-  padding-bottom: 10px; margin-bottom: 14px;
-  border-bottom: 1px solid var(--border);
-}
-.games-col.free h3  { color: var(--green); }
-.games-col.prem h3  { color: var(--gold); }
-
-.game-item {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 13px 15px; margin-bottom: 8px;
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--r-sm);
-  transition: border-color .25s, transform .25s;
-}
-.game-item:hover { border-color: var(--bord2); transform: translateX(4px); }
-.game-item:last-child { margin-bottom: 0; }
-
-.gi-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
-.gi-name { font-weight: 700; font-size: clamp(.82rem,1.4vw,.9rem); margin-bottom: 2px; }
-.gi-desc { font-size: clamp(.71rem,1.1vw,.77rem); color: var(--gray); line-height: 1.45; }
-.gi-badge {
-  display: inline-flex; align-items: center; gap: 3px;
-  padding: 2px 8px; border-radius: 50px;
-  font-size: .61rem; font-weight: 600; margin-top: 4px;
-}
-.gi-badge.free { background: rgba(76,175,80,.07); border: 1px solid rgba(76,175,80,.2); color: var(--green); }
-.gi-badge.prem { background: rgba(255,215,0,.07); border: 1px solid rgba(255,215,0,.2); color: var(--gold); }
-
-/* ================================================
-   EVOLUTION
-================================================ */
-.evo-track {
-  display: flex; gap: 12px;
-  overflow-x: auto; padding: 6px 4px 18px;
-  scrollbar-width: thin; scrollbar-color: var(--g2) transparent;
-  -webkit-overflow-scrolling: touch;
-}
-.evo-track::-webkit-scrollbar { height: 3px; }
-.evo-track::-webkit-scrollbar-thumb { background: var(--g2); border-radius: 2px; }
-
-.evo-card {
-  flex: 0 0 110px; text-align: center;
-  padding: 16px 8px; background: var(--card);
-  border: 1px solid var(--border); border-radius: var(--r);
-  transition: border-color .3s, transform .3s;
-}
-.evo-card:hover { border-color: var(--bord2); transform: translateY(-4px); }
-.evo-card.gold-card { border-color: rgba(255,215,0,.22); }
-.evo-card.gold-card:hover { border-color: rgba(255,215,0,.5); }
-
-.evo-card img {
-  width: 70px; height: 70px; object-fit: contain;
-  margin: 0 auto 10px;
-}
-.evo-phase { font-size: .57rem; color: var(--gd); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
-.evo-phase.gold-txt { color: var(--gold); }
-.evo-name  { font-size: .76rem; font-weight: 700; color: var(--white); margin-top: 3px; }
-.evo-name.gold-txt { color: var(--gold); }
-.evo-when  { font-size: .62rem; color: var(--gray); margin-top: 2px; }
-
-/* ================================================
-   ACHIEVEMENTS GRID
-================================================ */
-.ach-grid {
-  display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
-}
-.ach-cat {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--r); padding: 20px 16px;
-  transition: border-color .3s, transform .3s;
-}
-.ach-cat:hover { border-color: var(--bord2); transform: translateY(-3px); }
-.ach-cat .icon { font-size: 1.55rem; margin-bottom: 10px; }
-.ach-cat h4 { font-size: .82rem; font-weight: 700; margin-bottom: 5px; }
-.ach-cat p  { font-size: .72rem; color: var(--gray); line-height: 1.5; }
-
-/* ================================================
-   DEMO VIDEO
-================================================ */
-.demo-wrap { max-width: 310px; margin: 0 auto; }
-.demo-frame {
-  position: relative; width: 100%; padding-bottom: 177.78%;
-  border-radius: 22px; overflow: hidden;
-  border: 2px solid rgba(76,175,80,.2);
-  box-shadow: 0 28px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(76,175,80,.06);
-}
-.demo-frame iframe {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%; border: none;
-}
-
-/* ================================================
-   INFO CARDS
-================================================ */
-.info-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-.info-card {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--r); padding: 28px 22px; text-align: center;
-  transition: border-color .3s, transform .3s;
-}
-.info-card:hover { border-color: var(--bord2); transform: translateY(-3px); }
-.info-card .ico { font-size: 2.1rem; margin-bottom: 14px; }
-.info-card h4 { font-size: .96rem; font-weight: 700; margin-bottom: 8px; }
-.info-card p  { font-size: .8rem; color: var(--gray); line-height: 1.65; }
-
-/* ================================================
-   BETA SIGNUP
-================================================ */
-.beta-wrap { display: flex; justify-content: center; }
-.beta-box {
-  max-width: 580px; width: 100%;
-  background: rgba(10,20,10,.92);
-  border: 1px solid rgba(76,175,80,.28);
-  border-radius: 24px; padding: 44px 36px; text-align: center;
-  position: relative; overflow: hidden;
-}
-.beta-box::before {
-  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 350px; height: 350px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(76,175,80,.06), transparent);
-  pointer-events: none;
-}
-.beta-steps {
-  display: flex; flex-direction: column; gap: 10px;
-  margin: 24px 0 30px; text-align: left;
-}
-.beta-step {
-  display: flex; align-items: flex-start; gap: 12px;
-  font-size: clamp(.8rem,1.4vw,.88rem); color: var(--gray2);
-}
-.step-num {
-  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
-  background: var(--g2); display: flex; align-items: center;
-  justify-content: center; font-size: .72rem; font-weight: 700; color: #fff;
-}
-
-/* ================================================
-   FAQ
-================================================ */
-.faq-list { max-width: 660px; display: flex; flex-direction: column; gap: 8px; }
-.fq { background: var(--card); border: 1px solid var(--border); border-radius: var(--r-sm); overflow: hidden; }
-.fq-q {
-  padding: 16px 20px; cursor: pointer;
-  display: flex; justify-content: space-between; align-items: center;
-  font-weight: 600; font-size: clamp(.83rem,1.4vw,.92rem);
-  transition: color .2s; gap: 12px; user-select: none;
-}
-.fq-q:hover { color: var(--green); }
-.fq-chevron {
-  width: 20px; height: 20px; border-radius: 50%;
-  background: rgba(76,175,80,.1); display: flex;
-  align-items: center; justify-content: center;
-  flex-shrink: 0; font-size: .72rem; color: var(--gd);
-  transition: transform .3s;
-}
-.fq.open .fq-chevron { transform: rotate(45deg); }
-.fq-a {
-  max-height: 0; overflow: hidden;
-  transition: max-height .4s ease, padding .3s;
-  padding: 0 20px; font-size: clamp(.78rem,1.3vw,.86rem);
-  color: var(--gray2); line-height: 1.75;
-}
-.fq.open .fq-a { max-height: 350px; padding: 0 20px 16px; }
-
-/* ================================================
-   CTA SECTION
-================================================ */
-.cta-section { text-align: center; padding: 90px 32px; position: relative; overflow: hidden; }
-.cta-glow {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-  width: 600px; height: 600px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(76,175,80,.07), transparent 70%);
-  pointer-events: none;
-}
-.cta-avatar {
-  width: 110px; margin: 0 auto 18px;
-  animation: float 6.5s ease-in-out infinite;
-  filter: drop-shadow(0 10px 28px rgba(76,175,80,.18));
-}
-.social-links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
-.social-link {
-  color: var(--gray2); font-size: .82rem;
-  padding: 7px 18px; border: 1px solid rgba(255,255,255,.09);
-  border-radius: 50px; transition: all .25s; white-space: nowrap;
-}
-.social-link:hover { border-color: var(--gd); color: var(--green); }
-
-/* back-to-top */
-.btt {
-  position: fixed; bottom: 28px; right: 28px; z-index: 90;
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--g2); color: #fff; border: none; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; box-shadow: 0 4px 16px rgba(0,0,0,.35);
-  opacity: 0; transform: translateY(16px);
-  transition: opacity .3s, transform .3s, background .2s;
-  pointer-events: none;
-}
-.btt.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
-.btt:hover { background: var(--gd); }
-
-/* CTA pulse glow */
-@keyframes ctaPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(76,175,80,.35); }
-  50% { box-shadow: 0 0 24px 8px rgba(76,175,80,.18); }
-}
-.cta-section .btn-primary {
-  animation: ctaPulse 3s ease-in-out infinite;
-}
-
-/* ================================================
-   FOOTER
-================================================ */
-footer {
-  background: var(--bg); border-top: 1px solid var(--border);
-  padding: 48px 32px 24px;
-}
-.footer-inner {
-  max-width: 1120px; margin: 0 auto;
-  display: grid; grid-template-columns: 2fr 1fr 1fr;
-  gap: 32px; margin-bottom: 28px;
-}
-.footer-brand p {
-  color: var(--gray); font-size: .82rem;
-  line-height: 1.7; margin-top: 10px; max-width: 260px;
-}
-.footer-col h4 {
-  font-size: .67rem; text-transform: uppercase;
-  letter-spacing: 2px; color: var(--gd);
-  margin-bottom: 14px; font-weight: 700;
-}
-.footer-col a {
-  display: block; color: var(--gray);
-  font-size: .82rem; margin-bottom: 9px; transition: color .2s;
-}
-.footer-col a:hover { color: var(--green); }
-.footer-bot {
-  max-width: 1120px; margin: 0 auto;
-  padding-top: 18px; border-top: 1px solid rgba(255,255,255,.05);
-  display: flex; justify-content: space-between;
-  font-size: .72rem; color: var(--gray); flex-wrap: wrap; gap: 8px;
-}
-
-.disclaimer {
-  max-width: 1120px; margin: 0 auto;
-  padding: 28px 32px; font-size: .67rem;
-  color: rgba(255,255,255,.2); line-height: 1.85;
-}
-.disclaimer h4 { color: rgba(255,255,255,.3); margin-bottom: 6px; font-size: .7rem; }
-
-/* ================================================
-   STATS BAR
-================================================ */
-.stats-bar {
-  background: var(--bg2);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 36px 32px;
-}
-.stats-bar-inner {
-  max-width: 1120px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(5,1fr);
-  gap: 8px; text-align: center;
-}
-.sbar-item { position: relative; }
-.sbar-item + .sbar-item::before {
-  content: ''; position: absolute; left: 0; top: 10%;
-  height: 80%; width: 1px;
-  background: var(--border);
-}
-.sbar-num {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(1.6rem,3vw,2.4rem); font-weight: 800;
-  color: var(--green); line-height: 1;
-  text-shadow: 0 0 30px rgba(129,199,132,.2);
-}
-.sbar-lbl {
-  font-size: .68rem; color: var(--gray);
-  text-transform: uppercase; letter-spacing: 1.5px; margin-top: 5px;
-}
-
-/* ================================================
-   HOW IT WORKS
-================================================ */
-.steps-row {
-  display: grid; grid-template-columns: repeat(4,1fr);
-  gap: 0; position: relative;
-}
-.steps-row::before {
-  content: '';
-  position: absolute; top: 32px; left: calc(12.5% + 8px); right: calc(12.5% + 8px);
-  height: 1px; background: linear-gradient(90deg, transparent, var(--bord2), var(--bord2), var(--bord2), transparent);
-  z-index: 0;
-}
-.step-item {
-  text-align: center; padding: 0 16px; position: relative; z-index: 1;
-}
-.step-icon-wrap {
-  width: 64px; height: 64px; margin: 0 auto 18px;
-  border-radius: 50%; border: 2px solid var(--bord2);
-  background: var(--bg3);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem; position: relative;
-  box-shadow: 0 0 0 6px var(--bg2);
-  transition: border-color .3s, box-shadow .3s;
-}
-.step-item:hover .step-icon-wrap {
-  border-color: var(--green);
-  box-shadow: 0 0 0 6px var(--bg2), 0 0 20px rgba(76,175,80,.2);
-}
-.step-num-badge {
-  position: absolute; top: -6px; right: -6px;
-  width: 20px; height: 20px; border-radius: 50%;
-  background: var(--g2); font-size: .6rem; font-weight: 800;
-  color: #fff; display: flex; align-items: center; justify-content: center;
-  border: 2px solid var(--bg2);
-}
-.step-item h4 { font-size: .92rem; font-weight: 700; margin-bottom: 6px; }
-.step-item p  { font-size: .78rem; color: var(--gray); line-height: 1.6; }
-
-/* ================================================
-   THEME COLOR STRIP
-================================================ */
-.theme-section { padding: 80px 0; overflow: hidden; }
-.theme-section .s-inner { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
-.theme-strip-wrap { margin-top: 36px; overflow: hidden; position: relative; }
-.theme-strip-wrap::before,
-.theme-strip-wrap::after {
-  content: ''; position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
-}
-.theme-strip-wrap::before { left: 0;  background: linear-gradient(90deg, var(--bg2), transparent); }
-.theme-strip-wrap::after  { right: 0; background: linear-gradient(-90deg, var(--bg2), transparent); }
-
-.theme-strip { display: flex; gap: 10px; animation: tscroll 35s linear infinite; width: max-content; }
-.theme-strip:hover { animation-play-state: paused; }
-@keyframes tscroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-.tswatch {
-  flex: 0 0 72px; height: 120px; border-radius: 12px;
-  border: 1px solid rgba(255,255,255,.06);
-  transition: transform .3s, box-shadow .3s;
-  cursor: default;
-}
-.tswatch:hover { transform: translateY(-6px) scale(1.05); box-shadow: 0 12px 30px rgba(0,0,0,.4); }
-
-/* ================================================
-   TRUST BADGES
-================================================ */
-.trust-strip {
-  padding: 28px 32px;
-  background: var(--bg3);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.trust-strip-inner {
-  max-width: 1120px; margin: 0 auto;
-  display: flex; align-items: center; justify-content: center;
-  gap: 10px; flex-wrap: wrap;
-}
-.trust-badge-item {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 14px; border-radius: 50px;
-  font-size: .72rem; font-weight: 600;
-  border: 1px solid rgba(76,175,80,.2);
-  background: rgba(76,175,80,.05);
-  color: var(--green);
-  white-space: nowrap;
-}
-.trust-badge-item.gold {
-  border-color: rgba(255,215,0,.2);
-  background: rgba(255,215,0,.05);
-  color: var(--gold);
-}
-.trust-sep {
-  width: 3px; height: 3px; border-radius: 50%;
-  background: var(--border); flex-shrink: 0;
-}
-
-/* ================================================
-   RELAPSE SUPPORT HIGHLIGHT
-================================================ */
-.relapse-card {
-  background: linear-gradient(135deg, rgba(46,125,50,.12), rgba(10,20,10,.95));
-  border: 1px solid rgba(76,175,80,.25);
-  border-radius: var(--r); padding: 32px 28px;
-  display: grid; grid-template-columns: auto 1fr;
-  gap: 20px; align-items: center;
-  margin-top: 20px;
-}
-.relapse-avatar {
-  width: 72px; height: 72px; object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(76,175,80,.15));
-}
-.relapse-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-.relapse-card p  { font-size: .84rem; color: var(--gray2); line-height: 1.65; }
-.info-avatar {
-  width: 64px; height: 64px; object-fit: contain; margin-bottom: 10px;
-  filter: drop-shadow(0 4px 10px rgba(76,175,80,.12));
-}
-
-/* ================================================
-   SCROLL REVEAL
-================================================ */
-.rv { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
-.rv.v { opacity: 1; transform: translateY(0); }
-.rv-d1 { transition-delay: .1s; }
-.rv-d2 { transition-delay: .2s; }
-.rv-d3 { transition-delay: .3s; }
-.rv-d4 { transition-delay: .4s; }
-
-/* ================================================
-   RESPONSIVE — TABLET
-================================================ */
-@media (max-width: 960px) {
-  .nav-links { display: none; }
-  .ham { display: flex; }
-  .bento { grid-template-columns: 1fr 1fr; }
-  .bc-wide  { grid-column: span 2; }
-  .bc-full  { grid-column: span 2; }
-  .ach-grid { grid-template-columns: repeat(2,1fr); }
-  .footer-inner { grid-template-columns: 1fr 1fr; }
-  .stats-bar-inner { grid-template-columns: repeat(3,1fr); gap: 16px; }
-  .steps-row { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .steps-row::before { display: none; }
-}
-
-/* ================================================
-   RESPONSIVE — MOBILE
-================================================ */
-@media (max-width: 720px) {
-  section { padding: 64px 20px; }
-  .hero { padding: 95px 20px 55px; }
-  nav { padding: 12px 20px; }
-  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 36px; }
-  .hero-sub { margin: 0 auto 32px; }
-  .hero-btns { justify-content: center; }
-  .hero-stats { justify-content: center; }
-  .hero-trust { margin: 0 auto 22px; }
-  .bento { grid-template-columns: 1fr; }
-  .bc-wide, .bc-full { grid-column: span 1; }
-  .games-split { grid-template-columns: 1fr; }
-  .info-grid { grid-template-columns: 1fr; }
-  .ach-grid { grid-template-columns: 1fr 1fr; }
-  .footer-inner { grid-template-columns: 1fr; }
-  .cta-section { padding: 64px 20px; }
-  .disclaimer { padding: 24px 20px; }
-  .stats-bar-inner { grid-template-columns: repeat(3,1fr); gap: 20px; }
-  .sbar-item + .sbar-item::before { display: none; }
-  .steps-row { grid-template-columns: 1fr; gap: 28px; }
-  .steps-row::before { display: none; }
-  .relapse-card { grid-template-columns: 1fr; text-align: center; }
-  .theme-section .s-inner { padding: 0 20px; }
-  .trust-strip { padding: 22px 20px; }
-}
-
-@media (max-width: 480px) {
-  .hero-btns { flex-direction: column; align-items: center; }
-  .btn-primary, .btn-secondary { width: 100%; max-width: 320px; justify-content: center; }
-  .hero-stats { gap: 20px; }
-  .beta-box { padding: 30px 20px; }
-  .social-links { gap: 8px; }
-  .stats-bar-inner { grid-template-columns: repeat(2,1fr); }
-  .stats-bar { padding: 28px 20px; }
-}
-
-@media (max-width: 380px) {
-  .hero-avatar { width: min(210px,58vw); }
-  .evo-card { flex: 0 0 92px; }
-  .evo-card img { width: 56px; height: 56px; }
-  nav { padding: 10px 14px; }
+@media(max-width:760px){
+  .hero{padding-top:126px}
+  :root{--sh:5px 5px 0 var(--ink);--sh-lg:7px 7px 0 var(--ink);--bw:2.5px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  .rv{opacity:1;transform:none}
 }
 </style>
 </head>
-<body class="lang-nl live">
+<body>
 
-<!-- PROGRESS BAR -->
-<div id="progress"></div>
+<div id="pre"><div>
+  <div class="pball"></div>
+  <div class="pre-t" data-i18n="pre">Even opstarten…</div>
+  <div class="prebar"><i id="prebar"></i></div>
+</div></div>
 
-<!-- ====== NAVIGATION ====== -->
-<nav id="navbar">
-  <a href="#" class="logo"><img class="logo-mark" src="/avatar_phase10.png" alt="WeedStop"><span class="g">Weed</span><span class="y">Stop</span></a>
+<div id="webgl"></div>
+<div class="cur"></div>
+<div id="prog"></div>
 
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#features"><span class="en-only">Features</span><span class="nl-only">Features</span></a></li>
-    <li><a href="#games">Games</a></li>
-    <li><a href="#evolution"><span class="en-only">Evolution</span><span class="nl-only">Evolutie</span></a></li>
-    <li><a href="#demo">Demo</a></li>
-    <li><a href="#beta"><span class="en-only">Download</span><span class="nl-only">Download</span></a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ul>
-
-  <div class="nav-right">
-    <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Switch language">EN</button>
-    <a href="#beta" class="nav-cta en-only">🚀 Get the App</a>
-    <a href="#beta" class="nav-cta nl-only">🚀 Download</a>
-  </div>
-
-  <div class="ham" id="ham" onclick="toggleMob()" role="button" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
+<nav id="nav">
+  <div class="navin">
+    <a class="brand" href="#top">
+      <img src="avatar_phase10.png" alt="WeedStop">
+      <span class="btxt">Weed<em>Stop</em></span>
+    </a>
+    <div class="navlinks">
+      <a href="#features" data-i18n="nav_features">Functies</a>
+      <a href="#journey" data-i18n="nav_journey">Avatar</a>
+      <a href="#screens" data-i18n="nav_screens">Screens</a>
+      <a href="#install" data-i18n="nav_install">Installeren</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+    </div>
+    <button class="langbtn" id="langBtn" type="button">EN</button>
+    <a class="navdl" href="#install" data-i18n="nav_download">Download</a>
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobMenu" role="dialog" aria-label="Navigation menu">
-  <a href="#features" onclick="closeMob()" class="en-only">Features</a>
-  <a href="#features" onclick="closeMob()" class="nl-only">Features</a>
-  <a href="#games" onclick="closeMob()" class="en-only">Games</a>
-  <a href="#games" onclick="closeMob()" class="nl-only">Games</a>
-  <a href="#evolution" onclick="closeMob()" class="en-only">Evolution</a>
-  <a href="#evolution" onclick="closeMob()" class="nl-only">Evolutie</a>
-  <a href="#demo" onclick="closeMob()">Demo</a>
-  <a href="#faq" onclick="closeMob()">FAQ</a>
-  <a href="#beta" onclick="closeMob()" class="en-only" style="color:var(--green)">🚀 Get the App</a>
-  <a href="#beta" onclick="closeMob()" class="nl-only" style="color:var(--green)">🚀 Download</a>
-</div>
-
-<!-- ====== HERO ====== -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-txt">
-      <div class="hero-badge">
-        🔔 <span class="en-only">Android · iOS Coming Soon</span>
-              <span class="nl-only">Android · iOS Binnenkort</span>
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="ribbon" data-i18n="hero_ribbon">Gratis · Anoniem · Android</span>
+      <h1 data-i18n="hero_h1">Stop met blowen.<span class="b">Begin vrij te leven.</span></h1>
+      <p class="heroline" data-i18n="hero_line">WeedStop is de gratis, gamified app die je elke dag gemotiveerd houdt op je wietvrije reis. Tel je streak, zie het geld oplopen, laat je avatar groeien en krijg 24/7 steun van een AI-coach.</p>
+      <div class="chips">
+        <span class="chip3 c1" data-i18n="chip1">🌱 100% Anoniem</span>
+        <span class="chip3 c2" data-i18n="chip2">💰 Altijd gratis</span>
+        <span class="chip3 c3" data-i18n="chip3">🤖 AI-coach</span>
+        <span class="chip3 c4" data-i18n="chip4">🎮 12 mini-games</span>
+        <span class="chip3 c5" data-i18n="chip5">🌍 5 talen</span>
       </div>
-      <div class="hero-trust">
-        🛡️ <span class="en-only">100% Anonymous · Minimal Ads · Free Forever</span>
-              <span class="nl-only">100% Anoniem · Minimale Advertenties · Altijd Gratis</span>
-      </div>
-
-      <h1>
-        <span class="en-only">Beat cravings.<br>Level up your <span class="g">life.</span></span>
-        <span class="nl-only">Stop met blowen.<br>Begin <span class="y">vrij</span> te leven.</span>
-      </h1>
-
-      <p class="hero-sub en-only">WeedStop gamifies your cannabis-free journey with AI coaching, global leaderboards, avatar evolution, and 33,000+ themes. Free. Anonymous. Available in 5 languages.</p>
-      <p class="hero-sub nl-only">WeedStop gamificeert jouw stopreis met AI-coaching, wereldwijde leaderboards, avatar evolutie en 33.000+ kleurenthema's. Gratis. Anoniem. In 5 talen.</p>
-
-      <div class="hero-btns">
-        <a href="#beta" class="btn-primary en-only coming-soon">📱 Coming Soon to Google Play</a>
-        <a href="#beta" class="btn-primary nl-only coming-soon">📱 Binnenkort op Google Play</a>
-        <a href="https://raw.githubusercontent.com/stylixweedstop-spec/weedstop/main/WeedStop.apk" download class="btn-primary play-live" aria-label="Download WeedStop for Android"><span class="en-only">📱 Download for Android</span><span class="nl-only">📱 Download voor Android</span></a>
-        <a href="#demo" class="btn-secondary en-only">Watch Demo ↓</a>
-        <a href="#demo" class="btn-secondary nl-only">Bekijk Demo ↓</a>
-      </div>
-
-      <div class="hero-stats">
-        <div><div class="stat-num">12</div><div class="stat-lbl en-only">Mini-Games</div><div class="stat-lbl nl-only">Mini-Games</div></div>
-        <div><div class="stat-num">33K+</div><div class="stat-lbl en-only">Themes</div><div class="stat-lbl nl-only">Thema's</div></div>
-        <div><div class="stat-num">200+</div><div class="stat-lbl en-only">Achievements</div><div class="stat-lbl nl-only">Prestaties</div></div>
-        <div><div class="stat-num">5</div><div class="stat-lbl en-only">Languages</div><div class="stat-lbl nl-only">Talen</div></div>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="hero-glow"></div>
-      <img src="avatar_phase10.png" alt="WeedStop Ascension Avatar" class="hero-avatar" fetchpriority="high">
-    </div>
-  </div>
-</section>
-
-<!-- ====== STATS BAR ====== -->
-<div class="stats-bar">
-  <div class="stats-bar-inner">
-    <div class="sbar-item">
-      <div class="sbar-num" data-target="12">0</div>
-      <div class="sbar-lbl en-only">Mini-Games</div>
-      <div class="sbar-lbl nl-only">Mini-Games</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-num" data-target="33000" data-suffix="K+">0</div>
-      <div class="sbar-lbl en-only">Color Themes</div>
-      <div class="sbar-lbl nl-only">Kleurenthema's</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-num" data-target="200" data-suffix="+">0</div>
-      <div class="sbar-lbl en-only">Achievements</div>
-      <div class="sbar-lbl nl-only">Prestaties</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-num" data-target="10">0</div>
-      <div class="sbar-lbl en-only">Avatar Phases</div>
-      <div class="sbar-lbl nl-only">Avatar Fases</div>
-    </div>
-    <div class="sbar-item">
-      <div class="sbar-num" data-target="5">0</div>
-      <div class="sbar-lbl en-only">Languages</div>
-      <div class="sbar-lbl nl-only">Talen</div>
-    </div>
-  </div>
-</div>
-
-<!-- ====== TRUST BADGES ====== -->
-<div class="trust-strip">
-  <div class="trust-strip-inner">
-    <span class="trust-badge-item">🛡️ <span class="en-only">100% Anonymous</span><span class="nl-only">100% Anoniem</span></span>
-    <span class="trust-sep"></span>
-    <span class="trust-badge-item">🔒 <span class="en-only">Firebase Secured</span><span class="nl-only">Firebase Beveiligd</span></span>
-    <span class="trust-sep"></span>
-    <span class="trust-badge-item">🚫 <span class="en-only">Minimal Ads</span><span class="nl-only">Minimale Advertenties</span></span>
-    <span class="trust-sep"></span>
-    <span class="trust-badge-item gold">⚔️ <span class="en-only">Anti-Cheat Verified</span><span class="nl-only">Anti-Cheat Geverifieerd</span></span>
-    <span class="trust-sep"></span>
-    <span class="trust-badge-item gold">🆓 <span class="en-only">Free Forever</span><span class="nl-only">Altijd Gratis</span></span>
-    <span class="trust-sep"></span>
-    <span class="trust-badge-item">🤖 <span class="en-only">Mistral AI Powered</span><span class="nl-only">Mistral AI Aangedreven</span></span>
-    <span class="trust-sep"></span>
-    <span class="trust-badge-item">🌐 <span class="en-only">5 Languages</span><span class="nl-only">5 Talen</span></span>
-  </div>
-</div>
-
-<!-- ====== HOW IT WORKS ====== -->
-<section>
-  <div class="s-inner rv">
-    <div class="eyebrow en-only">How it works</div>
-    <div class="eyebrow nl-only">Hoe het werkt</div>
-    <div class="section-title en-only">From day one to day 547.</div>
-    <div class="section-title nl-only">Van dag één tot dag 547.</div>
-    <p class="section-sub en-only">WeedStop guides you through every stage of recovery — from the moment you quit to earning the Ascension avatar 547 days later.</p>
-    <p class="section-sub nl-only">WeedStop begeleidt je door elke fase van herstel — van het moment dat je stopt tot het verdienen van het Hemelvaart-avatar 547 dagen later.</p>
-
-    <div class="steps-row">
-      <div class="step-item rv rv-d1">
-        <div class="step-icon-wrap">
-          <div class="step-num-badge">1</div>
-          📅
+      <div class="slab">
+        <div style="flex:1 1 auto;min-width:180px">
+          <div class="lbl" data-i18n="dl_lbl">Download voor Android</div>
+          <div class="big-t">WeedStop</div>
+          <div class="sub" data-i18n="dl_meta">v1.32 · 15,6 MB · Android 8.0+</div>
         </div>
-        <h4 class="en-only">Set Your Quit Date</h4>
-        <h4 class="nl-only">Stel Je Stopdatum In</h4>
-        <p class="en-only">Tell WeedStop when you stopped. Share your name, daily habits, and reason for quitting — your AI coach uses this to personalize guidance.</p>
-        <p class="nl-only">Vertel WeedStop wanneer je stopte. Deel je naam, dagelijkse gewoonten en reden — je AI-coach gebruikt dit voor gepersonaliseerde begeleiding.</p>
-      </div>
-      <div class="step-item rv rv-d2">
-        <div class="step-icon-wrap">
-          <div class="step-num-badge">2</div>
-          📊
-        </div>
-        <h4 class="en-only">Track Every Win</h4>
-        <h4 class="nl-only">Volg Elke Overwinning</h4>
-        <p class="en-only">Watch your days, money saved, and health improve in real time. Complete daily quizzes, earn points, and unlock achievements along the way.</p>
-        <p class="nl-only">Zie je dagen, geld bespaard en gezondheid verbeteren in realtime. Voltooi dagelijkse quizzen, verdien punten en ontgrendel prestaties.</p>
-      </div>
-      <div class="step-item rv rv-d3">
-        <div class="step-icon-wrap">
-          <div class="step-num-badge">3</div>
-          🎮
-        </div>
-        <h4 class="en-only">Play When You Crave</h4>
-        <h4 class="nl-only">Speel Als Je Craving Hebt</h4>
-        <p class="en-only">Feel a craving? Fire up a game. Crush targets, solve mazes, blast cravings in space. Compete on global leaderboards — anonymously.</p>
-        <p class="nl-only">Cravings? Open een game. Verpletter doelen, los doolhoven op, blast cravings in de ruimte. Compete op wereldwijde leaderboards — anoniem.</p>
-      </div>
-      <div class="step-item rv rv-d4">
-        <div class="step-icon-wrap">
-          <div class="step-num-badge">4</div>
-          🌟
-        </div>
-        <h4 class="en-only">Evolve Your Avatar</h4>
-        <h4 class="nl-only">Evolueer Je Avatar</h4>
-        <p class="en-only">Watch your avatar grow through 10 phases as you hit milestones. Reach Ascension at 547 days — 500 bonus points and the final form.</p>
-        <p class="nl-only">Zie je avatar groeien door 10 fases bij elke mijlpaal. Bereik Hemelvaart op 547 dagen — 500 bonuspunten en de eindvorm.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== FEATURES — BENTO ====== -->
-<section id="features" class="s-alt">
-  <div class="s-inner rv">
-    <div class="eyebrow en-only">Everything you need</div>
-    <div class="eyebrow nl-only">Alles wat je nodig hebt</div>
-
-    <div class="section-title en-only">Built to keep you clean.</div>
-    <div class="section-title nl-only">Gebouwd om nuchter te blijven.</div>
-
-    <p class="section-sub en-only">Every feature is designed around one goal: making your recovery journey rewarding, trackable, and something you actually look forward to each day.</p>
-    <p class="section-sub nl-only">Elke functie is ontworpen met één doel: jouw herstelreis belonend, meetbaar en iets waar je elke dag naar uitkijkt te maken.</p>
-
-    <div class="bento">
-
-      <!-- AI Coach — wide -->
-      <div class="bc bc-wide rv rv-d1">
-        <span class="bc-icon">🤖</span>
-        <h3 class="en-only">AI Recovery Coach</h3>
-        <h3 class="nl-only">AI Herstelcoach</h3>
-        <p class="en-only">24/7 personalized guidance powered by Mistral AI. Full conversation history, context-aware responses, and motivation tailored to your exact sobriety progress and daily habits.</p>
-        <p class="nl-only">24/7 persoonlijke begeleiding via Mistral AI. Volledige gespreksgeschiedenis, contextbewuste antwoorden en motivatie afgestemd op jouw exacte voortgang en dagelijkse gewoonten.</p>
-        <span class="bc-tag">✨ Mistral AI</span>
-      </div>
-
-      <!-- Sobriety Tracking -->
-      <div class="bc rv rv-d2">
-        <span class="bc-icon">📊</span>
-        <h3 class="en-only">Live Sobriety Stats</h3>
-        <h3 class="nl-only">Live Statistieken</h3>
-        <p class="en-only">Days sober, money saved, grams avoided, joints not smoked — all updating live every second.</p>
-        <p class="nl-only">Nuchtere dagen, geld bespaard, gram vermeden — alles live bijgewerkt elke seconde.</p>
-      </div>
-
-      <!-- Quiz — wide -->
-      <div class="bc bc-wide rv rv-d1">
-        <span class="bc-icon">🧠</span>
-        <h3 class="en-only">Daily Quiz & Encyclopedia</h3>
-        <h3 class="nl-only">Dagelijkse Quiz & Encyclopedie</h3>
-        <p class="en-only">10 questions per day across 5 languages. Earn points, build streaks, and climb Scholar levels through the cannabis recovery encyclopedia — with sobriety multipliers up to 2.5×.</p>
-        <p class="nl-only">10 vragen per dag in 5 talen. Verdien punten, bouw een streak op en klim naar Scholar-niveaus via de encyclopedie — met sobriety multipliers tot 2,5×.</p>
-      </div>
-
-      <!-- Points -->
-      <div class="bc rv rv-d2">
-        <span class="bc-icon">🪙</span>
-        <div class="bc-num">Points</div>
-        <h3 class="en-only">Economy System</h3>
-        <h3 class="nl-only">Economiesysteem</h3>
-        <p class="en-only">Earn by staying sober. Spend to unlock premium games, themes, and cosmetics. 100 pts/day cap.</p>
-        <p class="nl-only">Verdien door nuchter te blijven. Besteed aan premium games en thema's. Max 100 pts/dag.</p>
-      </div>
-
-      <!-- Themes -->
-      <div class="bc rv rv-d3">
-        <span class="bc-icon">🎨</span>
-        <div class="bc-num">33K+</div>
-        <h3 class="en-only">Color Themes</h3>
-        <h3 class="nl-only">Kleurenthema's</h3>
-        <p class="en-only">Every tile, card, and background fully customizable. Make the app uniquely yours.</p>
-        <p class="nl-only">Elk element volledig aanpasbaar. Maak de app echt van jou.</p>
-      </div>
-
-      <!-- Privacy -->
-      <div class="bc rv rv-d4">
-        <span class="bc-icon">🛡️</span>
-        <h3 class="en-only">100% Anonymous</h3>
-        <h3 class="nl-only">100% Anoniem</h3>
-        <p class="en-only">No email, no real name, no data selling. Firebase anonymous auth. Your journey stays completely private.</p>
-        <p class="nl-only">Geen e-mail, geen echte naam, geen data verkopen. Firebase anonieme auth. Jouw reis blijft privé.</p>
-        <span class="bc-tag">🔒 Zero PII</span>
-      </div>
-
-      <!-- Community — wide -->
-      <div class="bc bc-wide rv rv-d1">
-        <span class="bc-icon">🤝</span>
-        <h3 class="en-only">Anonymous Community Chat</h3>
-        <h3 class="nl-only">Anonieme Community Chat</h3>
-        <p class="en-only">Connect with others on the same journey using anonymous 8-character IDs. Moderated for safety — violations trigger escalating lockouts (1h/2h/4h) to keep the space supportive.</p>
-        <p class="nl-only">Verbind met anderen op dezelfde reis via anonieme 8-teken ID's. Gemoduleerd voor veiligheid — schendingen leiden tot escalerende uitsluitingen (1u/2u/4u).</p>
-      </div>
-
-      <!-- Lives -->
-      <div class="bc rv rv-d2">
-        <span class="bc-icon">❤️</span>
-        <div class="bc-num" style="font-size:1.8rem">25</div>
-        <h3 class="en-only">Lives System</h3>
-        <h3 class="nl-only">Levens Systeem</h3>
-        <p class="en-only">Max 25 lives, 2 regenerate per hour. Watch a rewarded ad to refill instantly.</p>
-        <p class="nl-only">Max 25 levens, 2 per uur opgeladen. Kijk een advertentie om direct bij te vullen.</p>
-      </div>
-
-    </div><!-- end bento grid -->
-
-    <!-- Relapse Support -->
-    <div class="relapse-card rv" style="margin-top:14px">
-      <img src="avatar_wait.png" alt="Relapse support" class="relapse-avatar" loading="lazy">
-      <div>
-        <h3 class="en-only">Relapse Support — Built In, Not Bolted On</h3>
-        <h3 class="nl-only">Terugval Ondersteuning — Ingebouwd</h3>
-        <p class="en-only">Relapse is part of recovery, not the end of it. WeedStop tracks your count, applies a compassionate point cap adjustment, and at your 3rd relapse offers a full reset. No shame. No judgment. Just forward momentum.</p>
-        <p class="nl-only">Terugval is onderdeel van herstel, niet het einde. WeedStop houdt je telling bij, past puntlimieten aan, en biedt bij de 3e terugval een medelevende volledige reset. Geen schaamte. Geen oordeel. Alleen vooruitgang.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== GAMES ====== -->
-<section id="games">
-  <div class="s-inner rv">
-    <div class="eyebrow en-only">12 Mini-Games</div>
-    <div class="eyebrow nl-only">12 Mini-Games</div>
-
-    <div class="section-title en-only">Crush cravings through play.</div>
-    <div class="section-title nl-only">Versla cravings door te spelen.</div>
-
-    <p class="section-sub en-only">6 free games available instantly. Earn 500 points to unlock premium games with global leaderboards. Compete worldwide — completely anonymously.</p>
-    <p class="section-sub nl-only">6 gratis games direct beschikbaar. Verdien 500 punten voor premium games met wereldwijde leaderboards. Compete anoniem wereldwijd.</p>
-
-    <div class="games-split">
-      <!-- FREE -->
-      <div class="games-col free">
-        <h3 class="en-only">🆓 Free Games</h3>
-        <h3 class="nl-only">🆓 Gratis Games</h3>
-
-        <div class="game-item">
-          <div class="gi-icon">💥</div>
-          <div>
-            <div class="gi-name">Craving Crusher</div>
-            <div class="gi-desc en-only">Tap to smash targets — haptic feedback + explosion particles</div>
-            <div class="gi-desc nl-only">Tap om doelen te verpletteren — haptische feedback + explosies</div>
-            <div class="gi-badge free">🆓 Free</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🃏</div>
-          <div>
-            <div class="gi-name">Clarity Match</div>
-            <div class="gi-desc en-only">Memory card matching — 8 pairs to flip and find</div>
-            <div class="gi-desc nl-only">Geheugenkaarten matchen — 8 paren omdraaien en vinden</div>
-            <div class="gi-badge free">🆓 Free</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🔤</div>
-          <div>
-            <div class="gi-name">Word of Power</div>
-            <div class="gi-desc en-only">Word unscramble — 3 difficulty levels to conquer</div>
-            <div class="gi-desc nl-only">Woorden ontwarren — 3 moeilijkheidsniveaus</div>
-            <div class="gi-badge free">🆓 Free</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🔢</div>
-          <div>
-            <div class="gi-name">Mindful Math</div>
-            <div class="gi-desc en-only">Mental arithmetic puzzles to sharpen focus</div>
-            <div class="gi-desc nl-only">Mentale rekenraadsels voor een scherpe focus</div>
-            <div class="gi-badge free">🆓 Free</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🗺️</div>
-          <div>
-            <div class="gi-name">Path Finder</div>
-            <div class="gi-desc en-only">Grid maze with moving enemies — navigate to safety</div>
-            <div class="gi-desc nl-only">Doolhof met bewegende vijanden — navigeer naar veiligheid</div>
-            <div class="gi-badge free">🆓 Free</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🏓</div>
-          <div>
-            <div class="gi-name">Paddle Bounce</div>
-            <div class="gi-desc en-only">Classic paddle game rebuilt with a 3D depth effect</div>
-            <div class="gi-desc nl-only">Klassiek paddle spel met een 3D diepte-effect</div>
-            <div class="gi-badge free">🆓 Free</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PREMIUM -->
-      <div class="games-col prem">
-        <h3 class="en-only">🏆 Premium Games — 500 pts</h3>
-        <h3 class="nl-only">🏆 Premium Games — 500 pts</h3>
-
-        <div class="game-item">
-          <div class="gi-icon">🌤️</div>
-          <div>
-            <div class="gi-name">Zen Ascent</div>
-            <div class="gi-desc en-only">Survive in the air — floor &amp; ceiling mean death, timer-based score</div>
-            <div class="gi-desc nl-only">Overleven in de lucht — vloer &amp; plafond = dood</div>
-            <div class="gi-badge prem">🏆 Global Leaderboard</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🐍</div>
-          <div>
-            <div class="gi-name">Verdant Trail</div>
-            <div class="gi-desc en-only">Snake with portals, reverse power-ups &amp; speed boosts</div>
-            <div class="gi-desc nl-only">Snake met portalen, reverse power-ups &amp; speed boosts</div>
-            <div class="gi-badge prem">🏆 Global Leaderboard</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🍃</div>
-          <div>
-            <div class="gi-name">Leaf Escape</div>
-            <div class="gi-desc en-only">Flappy Bird-style with swarm events &amp; 2s spawn shields</div>
-            <div class="gi-desc nl-only">Flappy Bird-stijl met zwermgebeurtenissen &amp; spawn-schilden</div>
-            <div class="gi-badge prem">🏆 Global Leaderboard</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🦘</div>
-          <div>
-            <div class="gi-name">Freedom Run</div>
-            <div class="gi-desc en-only">Doodle Jump-style vertical platformer — reach new heights</div>
-            <div class="gi-desc nl-only">Doodle Jump-stijl platformer — bereik nieuwe hoogten</div>
-            <div class="gi-badge prem">🏆 Global Leaderboard</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🚀</div>
-          <div>
-            <div class="gi-name">Clarity Blast</div>
-            <div class="gi-desc en-only">Space shooter — blast cravings, boss waves, collect power-ups</div>
-            <div class="gi-desc nl-only">Space shooter — vernietig cravings, bossgolven, power-ups verzamelen</div>
-            <div class="gi-badge prem">🏆 Global Leaderboard</div>
-          </div>
-        </div>
-
-        <div class="game-item">
-          <div class="gi-icon">🧱</div>
-          <div>
-            <div class="gi-name">Strength Stacker</div>
-            <div class="gi-desc en-only">Block stacking tower builder — how high can you go?</div>
-            <div class="gi-desc nl-only">Blokkenstapelaar — hoe hoog kun jij bouwen?</div>
-            <div class="gi-badge prem">🏆 Global Leaderboard</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== EVOLUTION ====== -->
-<section id="evolution" class="s-alt">
-  <div class="s-inner rv">
-    <div class="eyebrow en-only">Avatar Evolution · 10 Phases</div>
-    <div class="eyebrow nl-only">Avatar Evolutie · 10 Fases</div>
-
-    <div class="section-title en-only">Your character grows with you.</div>
-    <div class="section-title nl-only">Jouw karakter groeit met jou mee.</div>
-
-    <p class="section-sub en-only">From Seedling to Ascension — every sober day brings you closer to your next evolution. Tap an avatar 3× in-app to trigger the egg-break animation. Stage 10 awards 500 bonus points.</p>
-    <p class="section-sub nl-only">Van Zaailing tot Hemelvaart — elke nuchtere dag brengt je dichter bij de volgende evolutie. Tik 3× op een avatar in de app voor de eibreekanimatie. Fase 10 geeft 500 bonuspunten.</p>
-
-    <div class="evo-track">
-      <div class="evo-card">
-        <img src="avatar_phase1.png" alt="Phase 1: Seedling" loading="lazy">
-        <div class="evo-phase en-only">Phase 1</div><div class="evo-phase nl-only">Fase 1</div>
-        <div class="evo-name en-only">Seedling</div><div class="evo-name nl-only">Zaailing</div>
-        <div class="evo-when en-only">Day 1</div><div class="evo-when nl-only">Dag 1</div>
-      </div>
-      <div class="evo-card">
-        <img src="avatar_phase2.png" alt="Phase 2: Sprout" loading="lazy">
-        <div class="evo-phase en-only">Phase 2</div><div class="evo-phase nl-only">Fase 2</div>
-        <div class="evo-name en-only">Sprout</div><div class="evo-name nl-only">Spruit</div>
-        <div class="evo-when en-only">12 hours</div><div class="evo-when nl-only">12 uur</div>
-      </div>
-      <div class="evo-card">
-        <img src="avatar_phase3.png" alt="Phase 3: Growing" loading="lazy">
-        <div class="evo-phase en-only">Phase 3</div><div class="evo-phase nl-only">Fase 3</div>
-        <div class="evo-name en-only">Growing</div><div class="evo-name nl-only">Groeiend</div>
-        <div class="evo-when en-only">7 days</div><div class="evo-when nl-only">7 dagen</div>
-      </div>
-      <div class="evo-card">
-        <img src="avatar_phase4.png" alt="Phase 4: Resilience" loading="lazy">
-        <div class="evo-phase en-only">Phase 4</div><div class="evo-phase nl-only">Fase 4</div>
-        <div class="evo-name en-only">Resilience</div><div class="evo-name nl-only">Veerkracht</div>
-        <div class="evo-when en-only">14 days</div><div class="evo-when nl-only">14 dagen</div>
-      </div>
-      <div class="evo-card">
-        <img src="avatar_phase5.png" alt="Phase 5: Strength" loading="lazy">
-        <div class="evo-phase en-only">Phase 5</div><div class="evo-phase nl-only">Fase 5</div>
-        <div class="evo-name en-only">Strength</div><div class="evo-name nl-only">Kracht</div>
-        <div class="evo-when en-only">30 days</div><div class="evo-when nl-only">30 dagen</div>
-      </div>
-      <div class="evo-card">
-        <img src="avatar_phase6.png" alt="Phase 6: Mastery" loading="lazy">
-        <div class="evo-phase en-only">Phase 6</div><div class="evo-phase nl-only">Fase 6</div>
-        <div class="evo-name en-only">Mastery</div><div class="evo-name nl-only">Meesterschap</div>
-        <div class="evo-when en-only">60 days</div><div class="evo-when nl-only">60 dagen</div>
-      </div>
-      <div class="evo-card">
-        <img src="avatar_phase7.png" alt="Phase 7: Clarity" loading="lazy">
-        <div class="evo-phase en-only">Phase 7</div><div class="evo-phase nl-only">Fase 7</div>
-        <div class="evo-name en-only">Clarity</div><div class="evo-name nl-only">Helderheid</div>
-        <div class="evo-when en-only">90 days</div><div class="evo-when nl-only">90 dagen</div>
-      </div>
-      <div class="evo-card">
-        <img src="avatar_phase8.png" alt="Phase 8: Champion" loading="lazy">
-        <div class="evo-phase en-only">Phase 8</div><div class="evo-phase nl-only">Fase 8</div>
-        <div class="evo-name en-only">Champion</div><div class="evo-name nl-only">Kampioen</div>
-        <div class="evo-when en-only">180 days</div><div class="evo-when nl-only">180 dagen</div>
-      </div>
-      <div class="evo-card">
-        <img src="avatar_phase9.png" alt="Phase 9: Freedom" loading="lazy">
-        <div class="evo-phase en-only">Phase 9</div><div class="evo-phase nl-only">Fase 9</div>
-        <div class="evo-name en-only">Freedom</div><div class="evo-name nl-only">Vrijheid</div>
-        <div class="evo-when en-only">365 days</div><div class="evo-when nl-only">365 dagen</div>
-      </div>
-      <div class="evo-card gold-card">
-        <img src="avatar_phase10.png" alt="Phase 10: Ascension" loading="lazy">
-        <div class="evo-phase gold-txt en-only">Phase 10</div><div class="evo-phase gold-txt nl-only">Fase 10</div>
-        <div class="evo-name gold-txt en-only">Ascension</div><div class="evo-name gold-txt nl-only">Hemelvaart</div>
-        <div class="evo-when en-only">547 days</div><div class="evo-when nl-only">547 dagen</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== THEME COLOR STRIP ====== -->
-<section class="theme-section s-alt">
-  <div class="s-inner rv">
-    <div class="eyebrow en-only">Personalization</div>
-    <div class="eyebrow nl-only">Personalisatie</div>
-    <div class="section-title en-only">33,000+ unique color combinations.</div>
-    <div class="section-title nl-only">33.000+ unieke kleurencombinaties.</div>
-    <p class="section-sub en-only">Every tile, button, card, and background fully customizable. Earn themes by spending points in the in-app store. Your dashboard, your colors.</p>
-    <p class="section-sub nl-only">Elk element volledig aanpasbaar. Verdien thema's door punten te besteden in de in-app store. Jouw dashboard, jouw kleuren.</p>
-  </div>
-  <div class="theme-strip-wrap">
-    <div class="theme-strip" id="themeStrip"></div>
-  </div>
-</section>
-
-<!-- ====== ACHIEVEMENTS ====== -->
-<section id="achievements">
-  <div class="s-inner rv">
-    <div class="eyebrow en-only">200+ Achievements</div>
-    <div class="eyebrow nl-only">200+ Prestaties</div>
-
-    <div class="section-title en-only">Every milestone celebrated.</div>
-    <div class="section-title nl-only">Elk mijlpaal gevierd.</div>
-
-    <p class="section-sub en-only">Track sobriety, savings, health, knowledge, gaming, community, and behavior. Each achievement rewards points toward your next unlock — with anti-cheat validation on every score.</p>
-    <p class="section-sub nl-only">Volg nuchterheid, spaargeld, gezondheid, kennis, gaming, community en gedrag. Elke prestatie beloont punten voor je volgende ontgrendeling — met anti-cheat validatie op elk score.</p>
-
-    <div class="ach-grid">
-      <div class="ach-cat rv rv-d1">
-        <div class="icon">🌱</div>
-        <h4 class="en-only">Sobriety</h4><h4 class="nl-only">Nuchterheid</h4>
-        <p class="en-only">Days 1–730, scaling 1–73 pts per milestone</p>
-        <p class="nl-only">Dag 1–730, schaalt 1–73 pts per mijlpaal</p>
-      </div>
-      <div class="ach-cat rv rv-d2">
-        <div class="icon">💰</div>
-        <h4 class="en-only">Financial</h4><h4 class="nl-only">Financieel</h4>
-        <p class="en-only">$10–$5,000 saved · 5–100 pts each</p>
-        <p class="nl-only">$10–$5.000 bespaard · 5–100 pts elk</p>
-      </div>
-      <div class="ach-cat rv rv-d3">
-        <div class="icon">🫁</div>
-        <h4 class="en-only">Health</h4><h4 class="nl-only">Gezondheid</h4>
-        <p class="en-only">10–1,000 joints avoided · 1–100g skipped</p>
-        <p class="nl-only">10–1.000 joints vermeden · 1–100g overgeslagen</p>
-      </div>
-      <div class="ach-cat rv rv-d4">
-        <div class="icon">📚</div>
-        <h4 class="en-only">Knowledge</h4><h4 class="nl-only">Kennis</h4>
-        <p class="en-only">5–300 quiz answers · Scholar levels 1–20</p>
-        <p class="nl-only">5–300 quiz antwoorden · Scholar niveaus 1–20</p>
-      </div>
-      <div class="ach-cat rv rv-d1">
-        <div class="icon">🎮</div>
-        <h4 class="en-only">Gaming</h4><h4 class="nl-only">Gaming</h4>
-        <p class="en-only">3 score tiers per game · 15/30/50 pts</p>
-        <p class="nl-only">3 score tiers per game · 15/30/50 pts</p>
-      </div>
-      <div class="ach-cat rv rv-d2">
-        <div class="icon">🤝</div>
-        <h4 class="en-only">Community</h4><h4 class="nl-only">Community</h4>
-        <p class="en-only">Active chatter, helper, and mentor roles</p>
-        <p class="nl-only">Actieve chatter, helper en mentor rollen</p>
-      </div>
-      <div class="ach-cat rv rv-d3">
-        <div class="icon">🎯</div>
-        <h4 class="en-only">Behavioral</h4><h4 class="nl-only">Gedrag</h4>
-        <p class="en-only">Morning check-ins 7 / 30 / 100 days · perfect weeks</p>
-        <p class="nl-only">Ochtend check-ins 7 / 30 / 100 dagen · perfecte weken</p>
-      </div>
-      <div class="ach-cat rv rv-d4">
-        <div class="icon">🏆</div>
-        <h4 class="en-only">Milestones</h4><h4 class="nl-only">Mijlpalen</h4>
-        <p class="en-only">100 days + $500 → 100 pts · 365 days + $2,000 → 250 pts</p>
-        <p class="nl-only">100 dagen + $500 → 100 pts · 365 dagen + $2.000 → 250 pts</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== DEMO VIDEO ====== -->
-<section id="demo" class="s-alt">
-  <div class="s-inner">
-    <div style="text-align:center" class="rv">
-      <div class="eyebrow en-only">App Demo</div>
-      <div class="eyebrow nl-only">App Demo</div>
-      <div class="section-title en-only">See it in action.</div>
-      <div class="section-title nl-only">Zie het in actie.</div>
-      <p class="section-sub en-only" style="margin:0 auto 36px;text-align:center">Full walkthrough of WeedStop's features — AI coach, games, evolution, and more.</p>
-      <p class="section-sub nl-only" style="margin:0 auto 36px;text-align:center">Volledige walkthrough van WeedStop's functies — AI-coach, games, evolutie en meer.</p>
-      <div class="demo-wrap">
-        <div class="demo-frame">
-          <iframe src="https://www.youtube.com/embed/X_YehoVO6Xc"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen loading="lazy" title="WeedStop App Demo"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== WHY WEEDSTOP ====== -->
-<section>
-  <div class="s-inner rv">
-    <div class="eyebrow en-only">Why WeedStop</div>
-    <div class="eyebrow nl-only">Waarom WeedStop</div>
-    <div class="section-title en-only">Built for you. Free forever.</div>
-    <div class="section-title nl-only">Gebouwd voor jou. Altijd gratis.</div>
-
-    <div class="info-grid" style="margin-top:0">
-      <div class="info-card">
-        <img src="avatar_banner.png" alt="WeedStop Languages" class="info-avatar" loading="lazy">
-        <h4 class="en-only">5 Languages</h4><h4 class="nl-only">5 Talen</h4>
-        <p class="en-only">English, Dutch, German, French, Spanish — with more languages on the way.</p>
-        <p class="nl-only">Engels, Nederlands, Duits, Frans, Spaans — met meer talen in de maak.</p>
-      </div>
-      <div class="info-card">
-        <img src="avatar_handshake.png" alt="Global Community" class="info-avatar" loading="lazy">
-        <h4 class="en-only">Global Community</h4><h4 class="nl-only">Wereldwijde Community</h4>
-        <p class="en-only">Connect with thousands worldwide who understand exactly what you're going through.</p>
-        <p class="nl-only">Verbind met duizenden wereldwijd die precies begrijpen wat je doormaakt.</p>
-      </div>
-      <div class="info-card">
-        <img src="avatar_cup.png" alt="Free Forever" class="info-avatar" loading="lazy">
-        <h4 class="en-only">100% Free Forever</h4><h4 class="nl-only">100% Gratis voor Altijd</h4>
-        <p class="en-only">No subscriptions, no hidden costs, no credit card. Every single feature — always free.</p>
-        <p class="nl-only">Geen abonnementen, geen verborgen kosten, geen creditcard. Altijd gratis.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== BETA SIGNUP ====== -->
-<section id="beta" class="s-alt">
-  <div class="s-inner rv">
-    <div class="beta-wrap">
-      <div class="beta-box">
-        <div class="eyebrow coming-soon" style="text-align:center">
-          <span class="en-only">Launching Soon</span>
-          <span class="nl-only">Binnenkort Live</span>
-        </div>
-        <div class="eyebrow play-live-block" style="text-align:center">
-          <span class="en-only">Now Available</span>
-          <span class="nl-only">Nu Beschikbaar</span>
-        </div>
-        <div class="section-title coming-soon" style="text-align:center;margin-bottom:8px">
-          <span class="en-only">Coming Soon to Google Play 🚀</span>
-          <span class="nl-only">Binnenkort op Google Play 🚀</span>
-        </div>
-        <div class="section-title play-live-block" style="text-align:center;margin-bottom:8px">
-          <span class="en-only">Download WeedStop for Android 🚀</span>
-          <span class="nl-only">Download WeedStop voor Android 🚀</span>
-        </div>
-        <p style="color:var(--gray2);font-size:.88rem;margin-bottom:4px">
-          <span class="en-only">Free · Anonymous · Available on Android</span>
-          <span class="nl-only">Gratis · Anoniem · Beschikbaar op Android</span>
-        </p>
-
-        <p class="coming-soon" style="color:var(--gray2);font-size:.95rem;margin:18px auto 6px;max-width:520px">
-          <span class="en-only">WeedStop is launching on Google Play very soon. Follow us to be the first to know the moment it goes live.</span>
-          <span class="nl-only">WeedStop komt zeer binnenkort uit op Google Play. Volg ons en wees als eerste op de hoogte zodra hij live staat.</span>
-        </p>
-        <p class="play-live-block" style="color:var(--gray2);font-size:.95rem;margin:18px auto 6px;max-width:520px">
-          <span class="en-only">Download WeedStop free on Android. No account, no email — just tap install and start.</span>
-          <span class="nl-only">Download WeedStop gratis op Android. Geen account, geen e-mail — installeren en beginnen.</span>
-        </p>
-
-        <a href="https://www.instagram.com/weedstopapp" target="_blank" rel="noopener" class="btn-primary coming-soon" style="font-size:.95rem;padding:14px 38px">
-          <span class="en-only">🔔 Follow for Launch Updates</span>
-          <span class="nl-only">🔔 Volg voor Launch-updates</span>
+        <a class="btn ok" href="https://raw.githubusercontent.com/stylixweedstop-spec/weedstop/main/WeedStop.apk" download data-cur="big">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <span data-i18n="dl_btn">Download</span>
         </a>
-        <a href="https://raw.githubusercontent.com/stylixweedstop-spec/weedstop/main/WeedStop.apk" download class="btn-primary play-live" style="font-size:.95rem;padding:14px 38px" aria-label="Download WeedStop for Android"><span class="en-only">📱 Download for Android (.apk)</span><span class="nl-only">📱 Download voor Android (.apk)</span></a>
-        <p class="play-live-block" style="margin-top:12px;font-size:.78rem;color:var(--gray2);max-width:460px;margin-left:auto;margin-right:auto">
-          <span class="en-only">After downloading, open the file and tap <strong>Install</strong>. If Android asks, allow installing from this source (Settings → “Install unknown apps”). This is normal for apps outside the Play Store.</span>
-          <span class="nl-only">Na het downloaden: open het bestand en tik op <strong>Installeren</strong>. Vraagt Android erom, sta dan installeren vanaf deze bron toe (Instellingen → “Onbekende apps installeren”). Dit is normaal voor apps buiten de Play Store.</span>
-        </p>
-        <p style="margin-top:14px;font-size:.72rem;color:var(--gray)">
-          <span class="en-only">Follow <strong style="color:var(--gray2)">@weedstopapp</strong> on Instagram / TikTok / X</span>
-          <span class="nl-only">Volg <strong style="color:var(--gray2)">@weedstopapp</strong> op Instagram / TikTok / X</span>
-        </p>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="avatar_phase10.png" alt="WeedStop avatar" id="heroMascot">
+      <span class="coin-badge">💰 <span data-i18n="badge_saved">€ bespaard</span></span>
+      <span class="streak-badge">🔥 <span data-i18n="badge_streak">Dag-streak</span></span>
+    </div>
+  </div>
+  <div class="scrollcue"><span data-i18n="scroll">Scroll</span><i></i></div>
+</header>
+
+<main>
+
+<div class="ticker"><div class="band"><div class="run" id="run"></div></div></div>
+
+<section id="stats">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" data-i18n="stats_eyebrow">In het kort</span>
+      <h2 class="big" data-i18n="stats_h2">Alles zit erin. <em>Gratis.</em></h2>
+      <p class="lead" data-i18n="stats_lead">Geen abonnementen, geen verborgen kosten. Elke functie is vrij te gebruiken.</p>
+    </div>
+    <div class="orbs">
+      <div class="orb rv"><div class="n">12</div><div class="k" data-i18n="orb1">Mini-games</div></div>
+      <div class="orb rv d1"><div class="n" data-count="200" data-suffix="+">0</div><div class="k" data-i18n="orb2">Prestaties</div></div>
+      <div class="orb rv d2"><div class="n" data-count="33" data-suffix="K+">0</div><div class="k" data-i18n="orb3">Thema's</div></div>
+      <div class="orb rv d3"><div class="n">10</div><div class="k" data-i18n="orb4">Avatar-fases</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" data-i18n="feat_eyebrow">Waarom WeedStop</span>
+      <h2 class="big" data-i18n="feat_h2">Gebouwd om je <em>vol te houden</em></h2>
+      <p class="lead" data-i18n="feat_lead">Elke functie komt uit echte ervaring met stoppen — gemaakt om je door de zware momenten heen te helpen.</p>
+    </div>
+    <div class="deck" id="deck"></div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" data-i18n="jr_eyebrow">Avatar-evolutie</span>
+      <h2 class="big" data-i18n="jr_h2">Groei mee, <em>fase voor fase</em></h2>
+      <p class="lead" data-i18n="jr_lead">Hoe langer je clean blijft, hoe meer je avatar opknapt — van dieptepunt tot volledige glorie. Sleep om de ring te draaien.</p>
+    </div>
+  </div>
+  <div class="rv stagewrap">
+    <div class="stage" id="stage"><div class="ring" id="ring"></div></div>
+    <div class="stagectl">
+      <button class="arw" id="prev" aria-label="Vorige" data-cur="big"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="dots" id="dots"></div>
+      <button class="arw" id="next" aria-label="Volgende" data-cur="big"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <p class="hint" data-i18n="jr_hint">Sleep of gebruik de pijltjes 👆</p>
+  </div>
+</section>
+
+<section id="screens">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" data-i18n="sc_eyebrow">In de app</span>
+      <h2 class="big" data-i18n="sc_h2">Zo ziet het <em>eruit</em></h2>
+      <p class="lead" data-i18n="sc_lead">Een blik op je dashboard, de games, de AI-coach en meer.</p>
+    </div>
+  </div>
+  <div class="rv stagewrap">
+    <div class="stage stage-shot" id="stage2"><div class="ring" id="ring2"></div></div>
+    <div class="stagectl">
+      <button class="arw" id="prev2" aria-label="Vorige" data-cur="big"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="dots" id="dots2"></div>
+      <button class="arw" id="next2" aria-label="Volgende" data-cur="big"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <p class="hint" data-i18n="jr_hint">Sleep of gebruik de pijltjes 👆</p>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow" data-i18n="in_eyebrow">Aan de slag</span>
+      <h2 class="big" data-i18n="in_h2">In één minuut <em>geïnstalleerd</em></h2>
+      <p class="lead" data-i18n="in_lead">WeedStop installeer je rechtstreeks op je Android-toestel. Geen account, geen e-mail.</p>
+    </div>
+    <div class="split">
+      <div class="panel rv">
+        <h3>📱 Android <span class="plt" data-i18n="in_plt">Directe download</span></h3>
+        <ol class="steps" id="steps"></ol>
+        <div style="margin-top:20px">
+          <a class="btn ok" href="https://raw.githubusercontent.com/stylixweedstop-spec/weedstop/main/WeedStop.apk" download data-cur="big" style="width:100%;justify-content:center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span data-i18n="in_dl">Download WeedStop (15,6 MB)</span>
+          </a>
+        </div>
+      </div>
+      <div class="panel rv d2">
+        <h3>🛡️ <span data-i18n="safe_h">Veilig & privé</span></h3>
+        <p style="color:var(--ink2);font-weight:700;margin-top:0" data-i18n="safe_p">WeedStop is 100% anoniem: geen e-mail, geen echte naam, geen dataverkoop. Je meldt je anoniem aan, dus je reis blijft volledig privé.</p>
+        <div class="callout">
+          <b data-i18n="safe_c_t">"Onbekende bron" — is dat normaal?</b>
+          <p data-i18n="safe_c_p">Ja. Omdat je buiten de Play Store installeert, vraagt Android eenmalig toestemming voor deze bron. Dat is normaal en veilig — het is precies dezelfde app.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ====== FAQ ====== -->
 <section id="faq">
-  <div class="s-inner rv">
-    <div class="eyebrow">FAQ</div>
-    <div class="section-title en-only">Common questions.</div>
-    <div class="section-title nl-only">Veelgestelde vragen.</div>
+  <div class="wrap">
+    <div class="shead rv">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="big" data-i18n="faq_h2">Veelgestelde <em>vragen</em></h2>
+      <p class="lead" data-i18n="faq_lead">Tik op een kaart om het antwoord te zien.</p>
+    </div>
+    <div class="flips" id="flips"></div>
+  </div>
+</section>
 
-    <div class="faq-list" style="margin-top:32px">
-
-      <div class="fq">
-        <div class="fq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-          <span class="en-only">Is WeedStop really 100% free?</span>
-          <span class="nl-only">Is WeedStop echt 100% gratis?</span>
-          <div class="fq-chevron">+</div>
-        </div>
-        <div class="fq-a">
-          <span class="en-only">Yes, completely free forever. No subscriptions, no hidden costs, no credit card required. The points economy is entirely internal — you earn and spend within the app, no real money involved.</span>
-          <span class="nl-only">Ja, volledig gratis voor altijd. Geen abonnementen, geen verborgen kosten, geen creditcard. De punten-economie is volledig intern — je verdient en besteedt binnen de app, geen echt geld.</span>
-        </div>
+<section id="cta" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta rv">
+      <img class="mascot" src="avatar_phase10.png" alt="WeedStop avatar">
+      <h2 data-i18n="cta_h2">Begin vandaag je streak</h2>
+      <p data-i18n="cta_p">Gratis. Anoniem. Voor altijd. Je eerste clean dag begint nu.</p>
+      <div class="row">
+        <a class="btn ok" href="https://raw.githubusercontent.com/stylixweedstop-spec/weedstop/main/WeedStop.apk" download data-cur="big">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <span data-i18n="cta_btn">Download voor Android</span>
+        </a>
+        <a class="btn ghost" href="#features" data-cur="big" data-i18n="cta_ghost">Bekijk functies</a>
       </div>
-
-      <div class="fq">
-        <div class="fq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-          <span class="en-only">Is my data private?</span>
-          <span class="nl-only">Is mijn data privé?</span>
-          <div class="fq-chevron">+</div>
-        </div>
-        <div class="fq-a">
-          <span class="en-only">Fully anonymous — no real name, no email verification, no data selling. Firebase anonymous authentication means your recovery journey stays completely private. Your 8-character ID is the only identifier.</span>
-          <span class="nl-only">Volledig anoniem — geen echte naam, geen e-mailverificatie, geen data verkopen. Firebase anonieme authenticatie betekent dat jouw herstelreis volledig privé blijft. Je 8-teken ID is het enige identifier.</span>
-        </div>
-      </div>
-
-      <div class="fq">
-        <div class="fq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-          <span class="en-only">When is the full release?</span>
-          <span class="nl-only">Wanneer is de volledige release?</span>
-          <div class="fq-chevron">+</div>
-        </div>
-        <div class="fq-a">
-          <span class="en-only">WeedStop is launching on Google Play very soon. iOS is planned for a future update.</span>
-          <span class="nl-only">WeedStop komt zeer binnenkort uit op Google Play. iOS is gepland voor een toekomstige update.</span>
-        </div>
-      </div>
-
-      <div class="fq">
-        <div class="fq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-          <span class="en-only">What happens if I relapse?</span>
-          <span class="nl-only">Wat als ik hervallen ben?</span>
-          <div class="fq-chevron">+</div>
-        </div>
-        <div class="fq-a">
-          <span class="en-only">WeedStop tracks your relapse count and applies a daily point cap reduction (100→50 pts). At the 3rd relapse, you get the option for a full reset. Relapse is part of recovery — the app is built to support you through it, not judge you.</span>
-          <span class="nl-only">WeedStop houdt je relapse-telling bij en verlaagt de dagelijkse puntenlimiet (100→50 pts). Bij de 3e relapse heb je de optie voor een volledige reset. Terugval hoort bij herstel — de app is gebouwd om je erdoorheen te helpen, niet om je te beoordelen.</span>
-        </div>
-      </div>
-
-      <div class="fq">
-        <div class="fq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-          <span class="en-only">How do global leaderboards work?</span>
-          <span class="nl-only">Hoe werken de wereldwijde leaderboards?</span>
-          <div class="fq-chevron">+</div>
-        </div>
-        <div class="fq-a">
-          <span class="en-only">6 premium games feature global leaderboards. Top 20 players per game are shown in real-time via Firebase — fully anonymous. Anti-cheat systems validate every score against time played.</span>
-          <span class="nl-only">6 premium games hebben wereldwijde leaderboards. Top 20 spelers per game worden realtime getoond via Firebase — volledig anoniem. Anti-cheat systemen valideren elk score tegen speeltijd.</span>
-        </div>
-      </div>
-
-      <div class="fq">
-        <div class="fq-q" onclick="toggleFaq(this)" role="button" aria-expanded="false">
-          <span class="en-only">Can it replace professional treatment?</span>
-          <span class="nl-only">Kan het professionele behandeling vervangen?</span>
-          <div class="fq-chevron">+</div>
-        </div>
-        <div class="fq-a">
-          <span class="en-only">No. WeedStop is a supportive wellness tool — not a substitute for professional care. If you're struggling with severe addiction, please consult a healthcare professional.</span>
-          <span class="nl-only">Nee. WeedStop is een ondersteunend wellness-hulpmiddel — geen vervanging voor professionele hulp. Bij ernstige verslaving, raadpleeg een zorgprofessional.</span>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- ====== CTA ====== -->
-<section class="cta-section">
-  <div style="position:relative;z-index:1" class="rv">
-    <div class="cta-glow"></div>
-    <img src="avatar_phase10.png" alt="WeedStop Avatar" class="cta-avatar" loading="lazy">
-    <div class="section-title en-only">Ready to take back control?</div>
-    <div class="section-title nl-only">Klaar om de controle terug te nemen?</div>
-    <p class="section-sub en-only" style="margin:10px auto 28px;text-align:center">Launching on Google Play soon. Be part of the journey from the start.</p>
-    <p class="section-sub nl-only" style="margin:10px auto 28px;text-align:center">Binnenkort op Google Play. Maak deel uit van de reis vanaf het begin.</p>
-    <a href="mailto:stylixweedstop@gmail.com" class="btn-primary" style="font-size:1rem;padding:15px 42px">
-      <span class="en-only">📱 Join the Beta — Free</span>
-      <span class="nl-only">📱 Meedoen — Gratis</span>
-    </a>
-    <div class="social-links">
-      <a href="https://www.instagram.com/weedstopapp" target="_blank" rel="noopener" class="social-link">📸 @weedstopapp</a>
-      <a href="https://www.tiktok.com/@weedstopapp" target="_blank" rel="noopener" class="social-link">♪ TikTok</a>
-      <a href="https://x.com/WeedStopNL" target="_blank" rel="noopener" class="social-link">𝕏 Twitter</a>
-      <a href="mailto:stylixweedstop@gmail.com" class="social-link">✉ Email</a>
-    </div>
-  </div>
-</section>
+</main>
 
-<!-- Back to top -->
-<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
-
-<!-- ====== FOOTER ====== -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="#" class="logo"><img class="logo-mark" src="/avatar_phase10.png" alt="WeedStop"><span class="g">Weed</span><span class="y">Stop</span></a>
-      <p class="en-only">The #1 free gamified cannabis sobriety app. Launching on Google Play soon.</p>
-      <p class="nl-only">De #1 gratis gamified cannabis sobriety app. Binnenkort op Google Play.</p>
+  <div class="wrap fin">
+    <div>
+      <div class="fb">WeedStop</div>
+      <div data-i18n="foot_desc">De gratis, gamified app om te stoppen met blowen.<br>Gemaakt door StyliX.</div>
     </div>
-    <div class="footer-col">
-      <h4 class="en-only">Product</h4><h4 class="nl-only">Product</h4>
-      <a href="#features" class="en-only">Features</a><a href="#features" class="nl-only">Features</a>
-      <a href="#games">Games</a>
-      <a href="#evolution" class="en-only">Evolution</a><a href="#evolution" class="nl-only">Evolutie</a>
-      <a href="#achievements" class="en-only">Achievements</a><a href="#achievements" class="nl-only">Prestaties</a>
-      <a href="#faq">FAQ</a>
+    <div style="max-width:44ch">
+      <div data-i18n="foot_social">Volg <strong style="color:var(--ink)">@weedstopapp</strong> op Instagram · TikTok · X</div>
+      <div style="margin-top:8px;opacity:.8" data-i18n="foot_legal">© 2026 StyliX. WeedStop is een motivatie- en lifestyle-app en geeft geen medisch advies.</div>
     </div>
-    <div class="footer-col">
-      <h4>Connect</h4>
-      <a href="https://www.instagram.com/weedstopapp" target="_blank" rel="noopener">📸 Instagram</a>
-      <a href="https://www.tiktok.com/@weedstopapp" target="_blank" rel="noopener">♪ TikTok</a>
-      <a href="https://x.com/WeedStopNL" target="_blank" rel="noopener">𝕏 Twitter</a>
-      <a href="mailto:stylixweedstop@gmail.com">✉ stylixweedstop@gmail.com</a>
-    </div>
-  </div>
-  <div class="footer-bot">
-    <span>© 2026 WeedStop</span>
-    <span class="en-only">Built by an ex-smoker from 🇳🇱</span>
-    <span class="nl-only">Gebouwd door een ex-blower uit 🇳🇱</span>
-    <span>stylixweedstop@gmail.com</span>
   </div>
 </footer>
 
-<div class="disclaimer">
-  <div>
-    <h4>⚠️ <span class="en-only">Disclaimer</span><span class="nl-only">Disclaimer</span></h4>
-    <p class="en-only">WeedStop is a supportive wellness tool and does not provide medical advice, diagnosis, or treatment. It is not a substitute for professional help. The AI coach provides general wellness guidance only. If you're experiencing a medical emergency or mental health crisis, contact your local emergency services. EU 112 | US 911 | UK 999.</p>
-    <p class="nl-only">WeedStop is een ondersteunend wellness-hulpmiddel en biedt geen medisch advies, diagnose of behandeling. Het is geen vervanging voor professionele hulp. De AI-coach biedt alleen algemene wellness-begeleiding. Neem bij een medische noodsituatie of geestelijke gezondheidscrisis contact op met de hulpdiensten. NL/EU 112.</p>
-  </div>
-</div>
+<div class="toast" id="toast" data-i18n="toast">Link gekopieerd! 📋</div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
-/* ============================================
-   THEME COLOR STRIP — GENERATE SWATCHES
-============================================ */
-(function() {
-  const strip = document.getElementById('themeStrip');
-  if (!strip) return;
+/* ═══════════════ CONTENT DATA (bilingual) ═══════════════ */
+const AV = i => `avatars/avatar_phase${i}.png`;
+const PHASES = [
+ [1,{nl:'Dieptepunt',en:'Rock Bottom'}],
+ [2,{nl:'Ontwaken',en:'Waking Up'}],
+ [3,{nl:'Eén week clean',en:'One Week Clean'}],
+ [4,{nl:'Opklaren',en:'Clearing Up'}],
+ [5,{nl:'Fris & helder',en:'Clean & Bright'}],
+ [6,{nl:'Sparen',en:'Saving Up'}],
+ [7,{nl:'Op dreef',en:'On a Roll'}],
+ [8,{nl:'Bloeien',en:'Thriving'}],
+ [9,{nl:'Goud',en:'Golden'}],
+ [10,{nl:'Ascensie',en:'Ascension'}]
+];
+const SHOTS = [1,2,3,4,5,6,7,8].map(i => `shots/screenshot_0${i}.png`);
 
-  // Define a rich set of gradient swatches representing WeedStop's 33K+ themes
-  const swatches = [
-    // Greens (primary brand)
-    'linear-gradient(160deg,#1B5E20,#4CAF50)',
-    'linear-gradient(160deg,#0d2b0d,#81C784)',
-    'linear-gradient(160deg,#2E7D32,#A5D6A7)',
-    'linear-gradient(160deg,#004d00,#00C853)',
-    // Purples
-    'linear-gradient(160deg,#1a0030,#9C27B0)',
-    'linear-gradient(160deg,#12005e,#7C4DFF)',
-    'linear-gradient(160deg,#38006b,#CE93D8)',
-    'linear-gradient(160deg,#1a0030,#673AB7)',
-    // Blues
-    'linear-gradient(160deg,#0d1b2e,#1E88E5)',
-    'linear-gradient(160deg,#001529,#00BCD4)',
-    'linear-gradient(160deg,#0a1628,#29B6F6)',
-    'linear-gradient(160deg,#002040,#039BE5)',
-    // Reds / Pinks
-    'linear-gradient(160deg,#2e0000,#E53935)',
-    'linear-gradient(160deg,#1a0010,#E91E63)',
-    'linear-gradient(160deg,#2d0020,#F06292)',
-    'linear-gradient(160deg,#3e0000,#FF5252)',
-    // Golds / Ambers
-    'linear-gradient(160deg,#2e1a00,#FFD700)',
-    'linear-gradient(160deg,#1f1200,#FFA000)',
-    'linear-gradient(160deg,#1a0e00,#FF8F00)',
-    'linear-gradient(160deg,#261500,#FFCA28)',
-    // Teals / Cyans
-    'linear-gradient(160deg,#001a1a,#00BFA5)',
-    'linear-gradient(160deg,#00201a,#1DE9B6)',
-    'linear-gradient(160deg,#001515,#00897B)',
-    // Dark Monochromes
-    'linear-gradient(160deg,#0a0a0a,#424242)',
-    'linear-gradient(160deg,#111,#616161)',
-    // Sunset / Warm
-    'linear-gradient(160deg,#1a0a00,#FF6D00)',
-    'linear-gradient(160deg,#2d1000,#FF9100)',
-    // Ice / Cool
-    'linear-gradient(160deg,#001a2e,#80DEEA)',
-    'linear-gradient(160deg,#00111a,#B2EBF2)',
-    // Nature
-    'linear-gradient(160deg,#0d1f0d,#558B2F)',
-    'linear-gradient(160deg,#1a1200,#8D6E63)',
-  ];
+const FEATURES = [
+ ['📊',{nl:'Live statistieken',en:'Live stats'},{nl:'Dagen, bespaard geld, vermeden grammen en niet-gerookte joints — elke seconde bijgewerkt.',en:'Days, money saved, grams avoided and joints not smoked — updating every second.'}],
+ ['🤖',{nl:'AI-motivatiecoach',en:'AI Motivation Coach'},{nl:'Persoonlijke, context-bewuste steun wanneer je het nodig hebt, dag en nacht.',en:'Personal, context-aware encouragement whenever you need it, day or night.'}],
+ ['🎮',{nl:'12 mini-games',en:'12 mini-games'},{nl:'Versla je craving door te spelen: crush, blast, race en stack de drang voorbij.',en:'Beat cravings by playing: crush, blast, race and stack your way past the urge.'}],
+ ['🏆',{nl:'200+ prestaties',en:'200+ achievements'},{nl:'Elke mijlpaal wordt gevierd, vanaf dag 1.',en:'Every milestone celebrated, from day one onward.'}],
+ ['🌱',{nl:'Avatar-evolutie',en:'Avatar evolution'},{nl:'Groei door 10 fases terwijl je clean blijft — van dieptepunt tot glorie.',en:'Grow through 10 phases as you stay on track — from rock bottom to glory.'}],
+ ['🧠',{nl:'Quiz & encyclopedie',en:'Daily quiz & encyclopedia'},{nl:'Leer over cannabis in 5 talen en verdien punten.',en:'Learn about cannabis in 5 languages and earn points.'}],
+ ['🌍',{nl:'Wereldwijde leaderboards',en:'Global leaderboards'},{nl:'Strijd anoniem met mensen over de hele wereld.',en:'Compete anonymously with people worldwide.'}],
+ ['🤝',{nl:'Anonieme community',en:'Anonymous community'},{nl:'Verbind met anderen op dezelfde weg — geen namen, geen druk.',en:'Connect with others on the same path — no names, no pressure.'}],
+ ['❤️',{nl:'Terugval-support',en:'Setback support'},{nl:'Bemoedigend en zonder oordeel, gemaakt om je vooruit te blijven helpen.',en:'Encouraging and shame-free, designed to keep you moving forward.'}]
+];
+const STEPS = [
+ [{nl:'Tik op Download',en:'Tap Download'},{nl:'Download het WeedStop-installatiebestand (15,6 MB).',en:'Download the WeedStop app file (15.6 MB).'}],
+ [{nl:'Open het bestand',en:'Open the file'},{nl:'Open het vanuit je meldingen of je Downloads-map.',en:'Open it from your notifications or Downloads folder.'}],
+ [{nl:'Sta de bron toe',en:'Allow the source'},{nl:'Vraagt Android erom? Sta installeren vanaf deze bron toe (eenmalig).',en:'If Android asks, allow installing from this source (one time).'}],
+ [{nl:'Installeer & open',en:'Install & open'},{nl:'Tik op Installeren en daarna op Openen.',en:'Tap Install, then Open.'}],
+ [{nl:'Start je streak',en:'Start your streak'},{nl:'Stel je stopdatum in en ontmoet je AI-coach.',en:'Set your quit date and meet your AI coach.'}]
+];
+const FAQ = [
+ [{nl:'Is het echt gratis?',en:'Is it really free?'},{nl:'Ja — 100% gratis. Geen abonnementen, geen verborgen kosten. Punten verdien en gebruik je in de app.',en:'Yes — 100% free. No subscriptions, no hidden costs. In-app points are earned and spent inside the app.'}],
+ [{nl:'Heb ik een account nodig?',en:'Do I need an account?'},{nl:'Nee. Anonieme aanmelding — geen e-mail, geen echte naam.',en:'No. Anonymous sign-in — no email, no real name.'}],
+ [{nl:'Waarom niet in de Play Store?',en:'Why not on Google Play?'},{nl:'We ronden de verificatie voor de gezondheidscategorie af. Tot die tijd installeer je hem direct — exact dezelfde app.',en:"We're completing verification for the health-app category. Until then, install directly — it's exactly the same app."}],
+ [{nl:'Welke Android-versie?',en:'Which Android version?'},{nl:'Android 8.0 of hoger.',en:'Android 8.0 or higher.'}],
+ [{nl:'Is mijn data privé?',en:'Is my data private?'},{nl:'Ja — anoniem, geen dataverkoop, en je kunt je gegevens altijd in de app verwijderen.',en:'Yes — anonymous, no data selling, and you can delete your data anytime in the app.'}],
+ [{nl:'In welke talen?',en:'What languages?'},{nl:'WeedStop is beschikbaar in 5 talen.',en:'WeedStop is available in 5 languages.'}]
+];
+const TICK = {
+ nl:['AI-coach','12 mini-games','200+ prestaties','33.000+ thema\'s','100% anoniem','Altijd gratis','5 talen','Wereldwijde leaderboards'],
+ en:['AI coach','12 mini-games','200+ achievements','33,000+ themes','100% anonymous','Always free','5 languages','Global leaderboards']
+};
 
-  // Duplicate for seamless loop
-  const all = [...swatches, ...swatches];
-  all.forEach(bg => {
-    const div = document.createElement('div');
-    div.className = 'tswatch';
-    div.style.background = bg;
-    strip.appendChild(div);
+/* ═══════════════ I18N (static keys) ═══════════════ */
+const I18N = {
+ nl:{
+  pre:'Even opstarten…',
+  nav_features:'Functies',nav_journey:'Avatar',nav_screens:'Screens',nav_install:'Installeren',nav_faq:'FAQ',nav_download:'Download',
+  hero_ribbon:'Gratis · Anoniem · Android',
+  hero_h1:'Stop met blowen.<span class="b">Begin vrij te leven.</span>',
+  hero_line:'WeedStop is de gratis, gamified app die je elke dag gemotiveerd houdt op je wietvrije reis. Tel je streak, zie het geld oplopen, laat je avatar groeien en krijg 24/7 steun van een AI-coach.',
+  chip1:'🌱 100% Anoniem',chip2:'💰 Altijd gratis',chip3:'🤖 AI-coach',chip4:'🎮 12 mini-games',chip5:'🌍 5 talen',
+  dl_lbl:'Download voor Android',dl_meta:'v1.32 · 15,6 MB · Android 8.0+',dl_btn:'Download',
+  badge_saved:'€ bespaard',badge_streak:'Dag-streak',scroll:'Scroll',
+  stats_eyebrow:'In het kort',stats_h2:'Alles zit erin. <em>Gratis.</em>',stats_lead:'Geen abonnementen, geen verborgen kosten. Elke functie is vrij te gebruiken.',
+  orb1:'Mini-games',orb2:'Prestaties',orb3:"Thema's",orb4:'Avatar-fases',
+  feat_eyebrow:'Waarom WeedStop',feat_h2:'Gebouwd om je <em>vol te houden</em>',feat_lead:'Elke functie komt uit echte ervaring met stoppen — gemaakt om je door de zware momenten heen te helpen.',
+  jr_eyebrow:'Avatar-evolutie',jr_h2:'Groei mee, <em>fase voor fase</em>',jr_lead:'Hoe langer je clean blijft, hoe meer je avatar opknapt — van dieptepunt tot volledige glorie. Sleep om de ring te draaien.',jr_hint:'Sleep of gebruik de pijltjes 👆',
+  sc_eyebrow:'In de app',sc_h2:'Zo ziet het <em>eruit</em>',sc_lead:'Een blik op je dashboard, de games, de AI-coach en meer.',
+  in_eyebrow:'Aan de slag',in_h2:'In één minuut <em>geïnstalleerd</em>',in_lead:'WeedStop installeer je rechtstreeks op je Android-toestel. Geen account, geen e-mail.',in_plt:'Directe download',in_dl:'Download WeedStop (15,6 MB)',
+  safe_h:'Veilig & privé',safe_p:'WeedStop is 100% anoniem: geen e-mail, geen echte naam, geen dataverkoop. Je meldt je anoniem aan, dus je reis blijft volledig privé.',
+  safe_c_t:'"Onbekende bron" — is dat normaal?',safe_c_p:'Ja. Omdat je buiten de Play Store installeert, vraagt Android eenmalig toestemming voor deze bron. Dat is normaal en veilig — het is precies dezelfde app.',
+  faq_h2:'Veelgestelde <em>vragen</em>',faq_lead:'Tik op een kaart om het antwoord te zien.',
+  cta_h2:'Begin vandaag je streak',cta_p:'Gratis. Anoniem. Voor altijd. Je eerste clean dag begint nu.',cta_btn:'Download voor Android',cta_ghost:'Bekijk functies',
+  foot_desc:'De gratis, gamified app om te stoppen met blowen.<br>Gemaakt door StyliX.',
+  foot_social:'Volg <strong style="color:var(--ink)">@weedstopapp</strong> op Instagram · TikTok · X',
+  foot_legal:'© 2026 StyliX. WeedStop is een motivatie- en lifestyle-app en geeft geen medisch advies.',
+  toast:'Link gekopieerd! 📋', faq_lbl:'Vraag', phase_word:'Fase'
+ },
+ en:{
+  pre:'Waking up…',
+  nav_features:'Features',nav_journey:'Avatar',nav_screens:'Screens',nav_install:'Install',nav_faq:'FAQ',nav_download:'Download',
+  hero_ribbon:'Free · Anonymous · Android',
+  hero_h1:'Quit weed.<span class="b">Start living free.</span>',
+  hero_line:'WeedStop is the free, gamified app that keeps you motivated on your cannabis-free journey — every single day. Track your streak, watch the money add up, evolve your avatar and get 24/7 support from an AI coach.',
+  chip1:'🌱 100% Anonymous',chip2:'💰 Always free',chip3:'🤖 AI coach',chip4:'🎮 12 mini-games',chip5:'🌍 5 languages',
+  dl_lbl:'Download for Android',dl_meta:'v1.32 · 15.6 MB · Android 8.0+',dl_btn:'Download',
+  badge_saved:'saved',badge_streak:'Day streak',scroll:'Scroll',
+  stats_eyebrow:'At a glance',stats_h2:'It\'s all in there. <em>Free.</em>',stats_lead:'No subscriptions, no hidden costs. Every feature is free to use.',
+  orb1:'Mini-games',orb2:'Achievements',orb3:'Themes',orb4:'Avatar phases',
+  feat_eyebrow:'Why WeedStop',feat_h2:'Built to keep you <em>going</em>',feat_lead:'Every feature comes from real experience with quitting — made to carry you through the hard moments.',
+  jr_eyebrow:'Avatar evolution',jr_h2:'Grow with it, <em>phase by phase</em>',jr_lead:'The longer you stay clean, the more your avatar recovers — from rock bottom to full glory. Drag to spin the ring.',jr_hint:'Drag or use the arrows 👆',
+  sc_eyebrow:'Inside the app',sc_h2:'Here\'s how it <em>looks</em>',sc_lead:'A peek at your dashboard, the games, the AI coach and more.',
+  in_eyebrow:'Getting started',in_h2:'Installed in <em>under a minute</em>',in_lead:'Install WeedStop directly on your Android device. No account, no email.',in_plt:'Direct download',in_dl:'Download WeedStop (15.6 MB)',
+  safe_h:'Safe & private',safe_p:'WeedStop is 100% anonymous: no email, no real name, no data selling. You sign in anonymously, so your journey stays completely private.',
+  safe_c_t:'"Unknown source" — is that normal?',safe_c_p:'Yes. Because you install outside the Play Store, Android asks once to allow this source. That\'s normal and safe — it\'s exactly the same app.',
+  faq_h2:'Frequently asked <em>questions</em>',faq_lead:'Tap a card to see the answer.',
+  cta_h2:'Start your streak today',cta_p:'Free. Anonymous. Forever. Your first clean day starts now.',cta_btn:'Download for Android',cta_ghost:'See features',
+  foot_desc:'The free, gamified app to quit weed.<br>Made by StyliX.',
+  foot_social:'Follow <strong style="color:var(--ink)">@weedstopapp</strong> on Instagram · TikTok · X',
+  foot_legal:'© 2026 StyliX. WeedStop is a motivation and lifestyle app and does not provide medical advice.',
+  toast:'Link copied! 📋', faq_lbl:'Question', phase_word:'Phase'
+ }
+};
+
+let LANG = (localStorage.getItem('ws_lang')) || (navigator.language||'nl').slice(0,2).toLowerCase();
+if (LANG !== 'en' && LANG !== 'nl') LANG = 'nl';
+
+/* ═══════════════ RENDER DYNAMIC ═══════════════ */
+function renderDeck(){
+  document.getElementById('deck').innerHTML = FEATURES.map(([ic,h,p],i)=>
+   `<article class="tc rv"><span class="num">${String(i+1).padStart(2,'0')}</span><span class="glare"></span>
+     <span class="ic">${ic}</span><h3 data-fld="h">${h[LANG]}</h3><p data-fld="p">${p[LANG]}</p></article>`).join('');
+  bindTilt();
+}
+function renderSteps(){
+  document.getElementById('steps').innerHTML = STEPS.map(([b,p])=>
+   `<li><b>${b[LANG]}</b><p>${p[LANG]}</p></li>`).join('');
+}
+function renderFaq(){
+  document.getElementById('flips').innerHTML = FAQ.map((r,i)=>`
+   <div class="flip" tabindex="0" role="button" aria-label="${r[0][LANG]}">
+     <div class="f"><span class="rn">${String(i+1).padStart(2,'0')}</span><div><b>${r[0][LANG]}</b></div></div>
+     <div class="b"><div class="lbl">${I18N[LANG].faq_lbl} ${String(i+1).padStart(2,'0')}</div><p>${r[1][LANG]}</p></div>
+   </div>`).join('');
+  document.querySelectorAll('.flip').forEach(f=>{
+    const t=()=>f.classList.toggle('turn');
+    if(hoverable){f.addEventListener('mouseenter',()=>f.classList.add('turn'));f.addEventListener('mouseleave',()=>f.classList.remove('turn'));}
+    else f.addEventListener('click',t);
+    f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});
   });
-})();
-
-/* ============================================
-   STATS COUNTER — COUNT UP ON SCROLL
-============================================ */
-(function() {
-  const counters = document.querySelectorAll('.sbar-num[data-target]');
-  if (!counters.length) return;
-
-  function formatNum(n, target, suffix) {
-    if (suffix === 'K+') return Math.round(n / 1000) + 'K+';
-    if (suffix === '+')  return Math.round(n) + '+';
-    return Math.round(n).toString();
-  }
-
-  function animateCounter(el) {
-    const target = parseFloat(el.dataset.target);
-    const suffix = el.dataset.suffix || '';
-    const duration = 1600;
-    const startTime = performance.now();
-
-    function tick(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      // Ease out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = formatNum(eased * target, target, suffix);
-      if (progress < 1) requestAnimationFrame(tick);
-      else el.textContent = formatNum(target, target, suffix);
-    }
-    requestAnimationFrame(tick);
-  }
-
-  const statsObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCounter(e.target);
-        statsObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  counters.forEach(c => statsObs.observe(c));
-})();
-
-/* ============================================
-   LANGUAGE TOGGLE
-============================================ */
-let lang = localStorage.getItem('ws-lang') || 'nl';
-
-function applyLang(l) {
-  lang = l;
-  localStorage.setItem('ws-lang', l);
-  var liveFlag = document.body.classList.contains('live') ? ' live' : '';
-  document.body.className = 'lang-' + l + liveFlag;
-  document.documentElement.lang = l;
-  document.getElementById('langBtn').textContent = l === 'nl' ? 'EN' : 'NL';
+}
+function renderScreens(){
+  document.getElementById('screens').innerHTML = SHOTS.map((s,i)=>
+   `<div class="phone rv ${'d'+(i%4)}"><img src="${s}" alt="WeedStop screenshot ${i+1}" loading="lazy"></div>`).join('');
+}
+function renderTicker(){
+  const items=[...TICK[LANG],...TICK[LANG]];
+  document.getElementById('run').innerHTML=items.map(x=>`<span>${x}</span>`).join('');
+}
+function renderCaps(){
+  document.querySelectorAll('#ring .slide').forEach((s,i)=>{
+    const ct=s.querySelector('.ct'), cn=s.querySelector('.cn');
+    if(ct) ct.textContent=PHASES[i][1][LANG];
+    if(cn) cn.textContent=I18N[LANG].phase_word+' '+(i+1);
+  });
 }
 
-function toggl
+/* ═══════════════ APPLY LANG ═══════════════ */
+function applyLang(l){
+  LANG=l; localStorage.setItem('ws_lang',l);
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=I18N[l][el.dataset.i18n]; if(v!=null) el.innerHTML=v;});
+  document.getElementById('langBtn').textContent = (l==='nl'?'EN':'NL');
+  renderDeck(); renderSteps(); renderFaq(); renderTicker(); renderCaps();
+  sweep();
+}
+document.getElementById('langBtn').addEventListener('click',()=>applyLang(LANG==='nl'?'en':'nl'));
+
+/* ═══════════════ PRELOADER ═══════════════ */
+let progress=0; const prebar=document.getElementById('prebar');
+const tickPre=setInterval(()=>{progress=Math.min(92,progress+Math.random()*18);prebar.style.width=progress+'%';},150);
+function finishPre(){clearInterval(tickPre);prebar.style.width='100%';setTimeout(()=>document.getElementById('pre').classList.add('gone'),340);}
+window.addEventListener('load',()=>setTimeout(finishPre,400));
+setTimeout(finishPre,4200);
+
+/* ═══════════════ THREE.JS — coins & leaves ═══════════════ */
+const reduced=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+const mobile=window.innerWidth<760;
+const hoverable=window.matchMedia('(hover:hover)').matches;
+const INK=0x243024;
+let scene,camera,renderer,floaters=[],sun,mx=0,my=0,tmx=0,tmy=0,scrollY=0;
+function outline(mesh,s){const o=new THREE.Mesh(mesh.geometry,new THREE.MeshBasicMaterial({color:INK,side:THREE.BackSide}));o.scale.setScalar(s||1.08);mesh.add(o);return mesh;}
+function toon(c){return new THREE.MeshLambertMaterial({color:c});}
+function makeCoin(){
+  const g=new THREE.Group();
+  const c=new THREE.Mesh(new THREE.CylinderGeometry(1,1,.22,26),toon(0xFFC838));
+  c.rotation.x=Math.PI/2; outline(c,1.06);
+  const rim=new THREE.Mesh(new THREE.TorusGeometry(1,.1,10,26),toon(0xEDA400)); rim.rotation.x=0;
+  g.add(c,rim); return g;
+}
+function makeLeaf(){
+  const g=new THREE.Group();
+  const l=new THREE.Mesh(new THREE.SphereGeometry(1,10,8),toon(0x5FC24C));
+  l.scale.set(.62,1.35,.22); outline(l,1.07);
+  g.add(l); return g;
+}
+function initGL(){
+  if(reduced||typeof THREE==='undefined') return false;
+  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});}catch(e){return false;}
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  renderer.setSize(innerWidth,innerHeight);
+  document.getElementById('webgl').appendChild(renderer.domElement);
+  scene=new THREE.Scene();
+  camera=new THREE.PerspectiveCamera(55,innerWidth/innerHeight,0.1,320); camera.position.set(0,1.5,22);
+  scene.add(new THREE.HemisphereLight(0xfff6e3,0x5fc24c,1.3));
+  const d=new THREE.DirectionalLight(0xfff6e3,1.1); d.position.set(-8,14,10); scene.add(d);
+  sun=new THREE.Mesh(new THREE.SphereGeometry(2.4,20,16),new THREE.MeshBasicMaterial({color:0xFFC838}));
+  sun.position.set(18,13,-30); outline(sun,1.05); scene.add(sun);
+  const N=mobile?7:14;
+  for(let i=0;i<N;i++){
+    const el=(i%2===0)?makeCoin():makeLeaf();
+    const side=Math.random()<.5?-1:1;
+    el.position.set(side*(11+Math.random()*17),-6-Math.random()*13,-12-Math.random()*40);
+    el.scale.setScalar(.7+Math.random()*1.1);
+    el.userData={y0:el.position.y,ph:Math.random()*6.28,sp:.25+Math.random()*.4,rot:(Math.random()-.5)*.02};
+    floaters.push(el); scene.add(el);
+  }
+  addEventListener('resize',onResize); return true;
+}
+function onResize(){if(!renderer)return;camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);}
+let T=0;
+function animate(){
+  requestAnimationFrame(animate); if(!renderer)return;
+  T+=0.01; mx+=(tmx-mx)*.04; my+=(tmy-my)*.04;
+  const sc=scrollY/Math.max(1,innerHeight);
+  floaters.forEach(f=>{const u=f.userData; f.position.y=u.y0+Math.sin(T*u.sp*2+u.ph)*.85+sc*3.4; f.rotation.y+=u.rot; f.rotation.z+=u.rot*.5;});
+  if(sun) sun.rotation.y+=0.002;
+  camera.position.x+=(mx*3.2-camera.position.x)*.045;
+  camera.position.y+=((1.5-my*2.1+sc*2.6)-camera.position.y)*.045;
+  camera.lookAt(0,1-sc*1.6,0); renderer.render(scene,camera);
+}
+addEventListener('pointermove',e=>{tmx=(e.clientX/innerWidth)*2-1;tmy=(e.clientY/innerHeight)*2-1;});
+addEventListener('scroll',()=>{scrollY=window.scrollY;},{passive:true});
+if(initGL()) animate();
+
+/* ═══════════════ CURSOR ═══════════════ */
+const cur=document.querySelector('.cur'); let cx=0,cy=0,px=0,py=0;
+addEventListener('pointermove',e=>{px=e.clientX;py=e.clientY;});
+(function follow(){cx+=(px-cx)*.2;cy+=(py-cy)*.2;cur.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(follow);})();
+document.addEventListener('pointerover',e=>{cur.classList.toggle('big',!!(e.target.closest&&e.target.closest('a,button,[data-cur],.tc,.flip,.slide,.orb,.phone')));});
+
+/* ═══════════════ NAV / PROGRESS ═══════════════ */
+const nav=document.getElementById('nav'),prog=document.getElementById('prog');
+function onScroll(){nav.classList.toggle('solid',scrollY>40);const h=document.documentElement.scrollHeight-innerHeight;prog.style.width=(h>0?(scrollY/h)*100:0)+'%';}
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+/* ═══════════════ REVEAL + COUNTERS (self-healing) ═══════════════ */
+function runCount(el){
+  if(el.dataset.done) return; el.dataset.done='1';
+  const target=parseFloat(el.dataset.count),suf=el.dataset.suffix||'',dec=(target%1!==0)?1:0,t0=performance.now(),dur=1400;
+  (function step(now){const p=Math.min(1,(now-t0)/dur);el.textContent=(target*(1-Math.pow(1-p,3))).toFixed(dec)+suf;if(p<1)requestAnimationFrame(step);})(t0);
+}
+let sweepQ=false;
+function sweep(){
+  sweepQ=false; const h=window.innerHeight||800;
+  document.querySelectorAll('.rv:not(.in)').forEach(el=>{ if(el.getBoundingClientRect().top<h-50) el.classList.add('in'); });
+  document.querySelectorAll('[data-count]:not([data-done])').forEach(el=>{ if(el.getBoundingClientRect().top<h-50) runCount(el); });
+}
+function queueSweep(){if(sweepQ)return;sweepQ=true;requestAnimationFrame(sweep);}
+addEventListener('scroll',queueSweep,{passive:true});
+addEventListener('resize',queueSweep);
+addEventListener('load',sweep);
+setTimeout(()=>document.querySelectorAll('.rv:not(.in)').forEach(el=>el.classList.add('in')),6000);
+
+/* ═══════════════ TILT ═══════════════ */
+function bindTilt(){
+  document.querySelectorAll('.tc').forEach(card=>{
+    let raf=null;
+    card.addEventListener('pointermove',e=>{
+      const r=card.getBoundingClientRect(),gx=e.clientX-r.left,gy=e.clientY-r.top;
+      const rx=((gy/r.height)-.5)*-11,ry=((gx/r.width)-.5)*13;
+      card.style.setProperty('--gx',gx+'px'); card.style.setProperty('--gy',gy+'px');
+      if(raf)cancelAnimationFrame(raf);
+      raf=requestAnimationFrame(()=>{card.style.transform=`perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(14px) scale(1.02)`;});
+    });
+    card.addEventListener('pointerleave',()=>{card.style.transition='transform .55s cubic-bezier(.34,1.56,.64,1)';card.style.transform='';setTimeout(()=>card.style.transition='',550);});
+  });
+}
+
+/* ═══════════════ 3D CAROUSEL FACTORY ═══════════════ */
+function initCarousel(o){
+  const stageEl=document.getElementById(o.stage),ringEl=document.getElementById(o.ring),dotsEl=document.getElementById(o.dots);
+  const N=o.count,STEP=360/N;
+  ringEl.innerHTML=o.slides;
+  dotsEl.innerHTML=Array.from({length:N},(_,i)=>`<b data-i="${i}"></b>`).join('');
+  const slides=[...ringEl.querySelectorAll('.slide')],dotEls=[...dotsEl.querySelectorAll('b')];
+  let idx=0,radius=600,cardW=240,cardH=360,rotOff=0,auto=0,dragging=false,startX=0,startOff=0;
+  function spin(){
+    ringEl.style.transform=`translateZ(${-radius}px) rotateY(${-idx*STEP+rotOff}deg)`;
+    const a=((idx%N)+N)%N;
+    slides.forEach((s,i)=>s.classList.toggle('act',i===a));
+    dotEls.forEach((d,i)=>d.classList.toggle('on',i===a));
+  }
+  function layout(){
+    const w=stageEl.clientWidth;
+    cardW=Math.max(o.minW,Math.min(o.maxW,w*o.wf)); cardH=Math.round(cardW*o.ratio);
+    radius=Math.round((cardW/2)/Math.tan(Math.PI/N))*o.rf;
+    slides.forEach((s,i)=>{s.style.width=cardW+'px';s.style.height=cardH+'px';s.style.left=(-cardW/2)+'px';s.style.top=(-cardH/2)+'px';s.style.transform=`rotateY(${i*STEP}deg) translateZ(${radius}px)`;});
+    spin();
+  }
+  document.getElementById(o.next).onclick=()=>{idx++;auto=0;spin();};
+  document.getElementById(o.prev).onclick=()=>{idx--;auto=0;spin();};
+  dotEls.forEach(d=>d.onclick=()=>{const t=+d.dataset.i,c=((idx%N)+N)%N;let df=t-c;if(df>N/2)df-=N;if(df<-N/2)df+=N;idx+=df;auto=0;spin();});
+  stageEl.addEventListener('pointerdown',e=>{dragging=true;startX=e.clientX;startOff=rotOff;auto=0;ringEl.classList.add('drag');stageEl.setPointerCapture(e.pointerId);});
+  stageEl.addEventListener('pointermove',e=>{if(!dragging)return;rotOff=startOff+(e.clientX-startX)*.22;spin();});
+  function endDrag(){if(!dragging)return;dragging=false;ringEl.classList.remove('drag');idx-=Math.round(rotOff/STEP);rotOff=0;spin();}
+  stageEl.addEventListener('pointerup',endDrag);stageEl.addEventListener('pointercancel',endDrag);
+  setInterval(()=>{if(!dragging&&++auto>5){idx++;spin();auto=0;}},o.autoMs||1000);
+  addEventListener('resize',layout);
+  return {layout,spin,isDragging:()=>dragging,get idx(){return idx;},setIdx(v){idx=v;auto=0;spin();}};
+}
+
+const AVATAR_SLIDES=PHASES.map(([i,cap])=>`<figure class="slide" data-i="${i}"><img src="${AV(i)}" alt="Avatar ${cap.en}" decoding="async" loading="${i<=6?'eager':'lazy'}"><figcaption class="cap"><b class="cn">Fase ${i}</b><span class="ct">${cap[LANG]}</span></figcaption></figure>`).join('');
+const SHOT_SLIDES=SHOTS.map((s,i)=>`<figure class="slide shot" data-i="${i}"><img src="${s}" alt="WeedStop screenshot ${i+1}" decoding="async" loading="${i<4?'eager':'lazy'}"></figure>`).join('');
+
+const avatarCar=initCarousel({stage:'stage',ring:'ring',dots:'dots',prev:'prev',next:'next',count:PHASES.length,slides:AVATAR_SLIDES,minW:170,maxW:250,wf:.30,ratio:1.4,rf:1.35,autoMs:1000});
+const shotCar=initCarousel({stage:'stage2',ring:'ring2',dots:'dots2',prev:'prev2',next:'next2',count:SHOTS.length,slides:SHOT_SLIDES,minW:150,maxW:210,wf:.26,ratio:1.7,rf:1.45,autoMs:1100});
+
+addEventListener('keydown',e=>{if(e.key==='ArrowRight')avatarCar.setIdx(avatarCar.idx+1);if(e.key==='ArrowLeft')avatarCar.setIdx(avatarCar.idx-1);});
+
+/* scroll-driven avatar ring */
+const journeyEl=document.getElementById('journey');
+let lastPhase=0;
+addEventListener('scroll',()=>{
+  const r=journeyEl.getBoundingClientRect(),vh=innerHeight;
+  if(r.top>vh||r.bottom<0) return;
+  const p=Math.min(1,Math.max(0,(vh*0.5-r.top)/(r.height*0.7)));
+  const target=Math.round(p*(PHASES.length-1));
+  if(target!==lastPhase&&!avatarCar.isDragging()){lastPhase=target;avatarCar.setIdx(target);}
+},{passive:true});
+
+/* ═══════════════ INIT ═══════════════ */
+applyLang(LANG);
+avatarCar.layout(); shotCar.layout();
+sweep();
+</script>
+</body>
+</html>
